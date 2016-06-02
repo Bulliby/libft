@@ -1,0 +1,1 @@
+Les listes doublement chaine next pointe vers l'element de fin de liste (la queue) et prev pointe sur l'element de tete
