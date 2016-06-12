@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/05/11 11:36:37 by gwells           ###   ########.fr       */
+/*   Updated: 2016/06/11 20:25:00 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,7 @@ void				ft_strstriter(char **strstr, void (*f)(char *str));
 char				*ft_strsupress_at(char *str, size_t pos);
 char				*ft_strsupress_at(char *str, size_t pos);
 char				*ft_strinsert_at(char *str, char c,  size_t pos);
+char				*ft_strpbrk(const char *s1, const char *s2);
 
 /*
 ** Pour C++

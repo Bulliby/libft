@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/09 18:12:31 by gwells            #+#    #+#             */
-/*   Updated: 2016/06/11 20:25:44 by gwells           ###   ########.fr       */
+/*   Created: 2016/06/11 20:02:43 by gwells            #+#    #+#             */
+/*   Updated: 2016/06/12 09:16:25 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include  "libft.h"
 
-int main(void)
+char			*ft_strpbrk(const char *s1, const char *s2)
 {
-	char	*test;
-	char	*str;
+	int			i;
+	char		*ret;
+	char		*tmp;
 
-	str = ft_strdup("\t ");
-	test = ft_strdup("totoest le meilleur");
-
-	printf("voici la chaine [%s]\n", ft_strpbrk(test, str));
+	i = 0;
+	ret = (char *)s1 + ft_strlen(s1);
+	while (s2[i])
+	{
+		tmp = ft_strchr(s1, (int)s2[i]);
+		if (tmp != NULL)
+		{
+			if (tmp < ret)
+				ret = tmp;
+		}
+		i++;
+	}
+	if (ret == s1 + ft_strlen(s1))
+		return (NULL);
+	return (ret + 1);
 }

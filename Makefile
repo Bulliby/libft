@@ -6,7 +6,7 @@
 #    By: gwells <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/11 00:09:30 by gwells            #+#    #+#              #
-#    Updated: 2016/05/11 11:33:51 by gwells           ###   ########.fr        #
+#    Updated: 2016/06/11 20:17:12 by gwells           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -122,7 +122,8 @@ SRC		=	ft_bzero.c \
 			ft_abs.c\
 			ft_strstriter.c\
 			ft_strsupress_at.c\
-			ft_strinsert_at.c
+			ft_strinsert_at.c\
+			ft_strpbrk.c
 
 OBJ		= $(SRC:.c=.o)
 
