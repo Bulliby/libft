@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 11:57:19 by gwells            #+#    #+#             */
-/*   Updated: 2016/06/12 19:06:55 by gwells           ###   ########.fr       */
+/*   Updated: 2016/06/13 11:07:53 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char			*ft_strrpbrk(const char *s1, const char *s2)
 		}
 		i++;
 	}
-	if (ft_strlen(ret) == 1)
-		return (ret);
+	if (tmp == NULL)
+		return((char*)s1);
 	return (ret + 1);
 }
