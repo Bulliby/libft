@@ -6,24 +6,26 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/09 17:45:09 by gwells            #+#    #+#             */
-/*   Updated: 2016/05/09 19:46:14 by gwells           ###   ########.fr       */
+/*   Updated: 2016/06/14 18:06:58 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-//check memory
+//TODO check memory
 
 char		*ft_strsupress_at(char *str, size_t pos)
 {
 	char	*ret;
+	char	*tmp;
 
-	ret = ft_memalloc_fail(sizeof(char) * ft_strlen(str));
-	ret = ft_strncpy(ret, str, pos);
+	tmp = ft_memalloc_fail(sizeof(char) * ft_strlen(str));
+	tmp = ft_strncpy(tmp, str, pos);
 	pos++;
 	while (*str && pos--)
 		str++;
-	ret = ft_strjoin(ret, str);
+	ret = ft_strjoin(tmp, str);
+	free(tmp);
 	return (ret);	
 }
