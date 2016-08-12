@@ -15,5 +15,5 @@
 void	ft_strclr(char *s)
 {
 	if (s)
-		bzero(s, ft_strlen(s) + 1);
+		ft_bzero(s, ft_strlen(s) + 1);
 }
