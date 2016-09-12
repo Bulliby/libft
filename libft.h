@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ../libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -171,6 +171,10 @@ char				*ft_strsupress_at(char *str, size_t pos);
 char				*ft_strinsert_at(char *str, char c,  size_t pos);
 char				*ft_strpbrk(const char *s1, const char *s2);
 char				*ft_strrpbrk(const char *s1, const char *s2);
+int					ft_cntc(char *str, char c);
+char				**ft_strsplit_ws(char const *s);
+char				**ft_tabdup(char **tab);
+int					ft_tablen(char **tab);
 
 /*
 ** Pour C++
