@@ -17,10 +17,7 @@ void	ft_dlstadd_circ(t_dlist *lst, t_dnode *newnode)
 	if (lst && newnode)
 	{
 		if (lst->head == NULL)
-		{
-			lst->head = newnode;
-			lst->queue = newnode;
-		}
+			ft_init_node_circ(lst, newnode);
 		else
 		{
 			lst->head->prev = newnode;

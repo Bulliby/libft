@@ -18,16 +18,18 @@ int main(void)
 	a = 6;
 	z = 10;
 	t_dlist *circ_list;
-	head = ft_dlstnewnode(&i, sizeof(int)); 
-	queue = ft_dlstnewnode(&x, sizeof(int)); 
-	circ_list = ft_dlstnew_circ(head, queue);
+	circ_list = ft_dlstnew();
 	node = ft_dlstnewnode_circ(&a, sizeof(int), circ_list); 
-	ft_dlstpushback_circ(circ_list, node);
+	ft_dlstadd_circ(circ_list, node);
 	node = ft_dlstnewnode_circ(&z, sizeof(int), circ_list); 
-	ft_dlstpushback_circ(circ_list, node);
+	ft_dlstadd_circ(circ_list, node);
+	node = ft_dlstnewnode_circ(&x, sizeof(int), circ_list); 
+	ft_dlstadd_circ(circ_list, node);
+	node = ft_dlstnewnode_circ(&i, sizeof(int), circ_list); 
+	ft_dlstadd_circ(circ_list, node);
 	while (node)
 	{
 		printf("value [%i]\n", (*(int*)node->content));
-		node = node->next;
+		node = node->prev;
 	}
 }

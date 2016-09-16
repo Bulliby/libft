@@ -180,6 +180,7 @@ t_dnode				*ft_dlstnewnode_circ(void const *content,\
 t_dlist				*ft_dlstnew_circ(t_dnode *head, t_dnode *queue);
 void				ft_dlstadd_circ(t_dlist *lst, t_dnode *newnode);
 void				ft_dlstpushback_circ(t_dlist *list, t_dnode *newnode);
+void				ft_init_node_circ(t_dlist *lst, t_dnode *newnode);
 
 /*
 ** Pour C++

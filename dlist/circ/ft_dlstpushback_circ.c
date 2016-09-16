@@ -17,10 +17,7 @@ void	ft_dlstpushback_circ(t_dlist *lst, t_dnode *newnode)
 	if (lst != NULL && newnode != NULL)
 	{
 		if (lst->queue == NULL)
-		{
-			lst->queue = newnode;
-			lst->head = newnode;
-		}
+			ft_init_node_circ(lst, newnode);
 		else
 		{
 			lst->queue->next = newnode;
