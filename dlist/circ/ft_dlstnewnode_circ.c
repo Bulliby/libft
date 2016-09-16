@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 #include <stdlib.h>
 
-t_dnode		*ft_dlstnewnode(void const *content, size_t content_size)
+t_dnode		*ft_dlstnewnode_circ(void const *content,\
+		size_t content_size, t_dlist *lst)
 {
 	t_dnode *lstnode;
 
@@ -29,7 +30,7 @@ t_dnode		*ft_dlstnewnode(void const *content, size_t content_size)
 		ft_memcpy(lstnode->content, content, content_size);
 		lstnode->content_size = content_size;
 	}
-	lstnode->next = NULL;
-	lstnode->prev = NULL;
+	lstnode->next = lst->head;
+	lstnode->prev = lst->queue;
 	return (lstnode);
 }
