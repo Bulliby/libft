@@ -13,7 +13,7 @@
 NAME		= libft.a
 
 SRC_DIRS	= $(shell find . -type d -follow -print)
-SRC 		= $(shell find . -type f -follow -print | grep -w "[.c]$$")
+SRC 		= $(shell find . ! -name  'main.c'  -type f -follow -print | grep -w "[.c]$$")
 OBJ			= $(SRC:.c=.o)
 
 CC			= gcc 
