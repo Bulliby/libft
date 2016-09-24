@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ../libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -120,7 +120,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 size_t				ft_list_size(t_list *begin_list);
 t_list				*ft_lstdup(int size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-void				ft_lstpushback(t_list **begin_list, t_list *lst);
+void				ft_lstpushback(t_list **begin_list, t_list *newnode);
 char				*ft_union(char *argv);
 t_dlist				*ft_dlstnew(void);
 t_dnode				*ft_dlstnewnode(void const *content, size_t content_size);
@@ -171,6 +171,16 @@ char				*ft_strsupress_at(char *str, size_t pos);
 char				*ft_strinsert_at(char *str, char c,  size_t pos);
 char				*ft_strpbrk(const char *s1, const char *s2);
 char				*ft_strrpbrk(const char *s1, const char *s2);
+int					ft_cntc(char *str, char c);
+char				**ft_strsplit_ws(char const *s);
+char				**ft_tabdup(char **tab);
+int					ft_tablen(char **tab);
+t_dnode				*ft_dlstnewnode_circ(void const *content,\
+		size_t content_size, t_dlist *lst);
+t_dlist				*ft_dlstnew_circ(t_dnode *head, t_dnode *queue);
+void				ft_dlstadd_circ(t_dlist *lst, t_dnode *newnode);
+void				ft_dlstpushback_circ(t_dlist *list, t_dnode *newnode);
+void				ft_init_node_circ(t_dlist *lst, t_dnode *newnode);
 
 /*
 ** Pour C++
