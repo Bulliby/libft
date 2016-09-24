@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/06/12 12:00:57 by gwells           ###   ########.fr       */
+/*   Updated: 2016/09/24 19:23:49 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ void				ft_dlstadd(t_dlist *lst, t_dnode *newnode);
 void				ft_dlstdel(t_dnode **alst, void (*del)(void *, size_t));
 void				ft_dlstpushback(t_dlist *list, t_dnode *newnode);
 void				ft_dlstdelone(t_dnode **alst, void (*del)(void *, size_t));
+void				ft_dlstsupress_at(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t));
 int					get_next_line(int const fd, char **line);
 void				*ft_memalloc_fail(size_t size);
 size_t				words(char const *str, char c);
@@ -173,8 +174,8 @@ char				*ft_strpbrk(const char *s1, const char *s2);
 char				*ft_strrpbrk(const char *s1, const char *s2);
 int					ft_cntc(char *str, char c);
 char				**ft_strsplit_ws(char const *s);
-char				**ft_tabdup(char **tab);
-int					ft_tablen(char **tab);
+char				**ft_tabdup(char **ft_tab);
+int					ft_tablen(char **ft_tab);
 t_dnode				*ft_dlstnewnode_circ(void const *content,\
 		size_t content_size, t_dlist *lst);
 t_dlist				*ft_dlstnew_circ(t_dnode *head, t_dnode *queue);
