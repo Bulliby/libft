@@ -6,11 +6,11 @@
 #    By: gwells <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/11 00:09:30 by gwells            #+#    #+#              #
-#    Updated: 2016/06/12 12:00:16 by gwells           ###   ########.fr        #
+#    Updated: 2016/06/18 17:50:49 by gwells           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+NAME	= 	libft.a
 
 SRC		=	ft_bzero.c \
 			ft_isdigit.c \
