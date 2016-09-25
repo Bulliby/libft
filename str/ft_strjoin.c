@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 15:14:09 by gwells            #+#    #+#             */
-/*   Updated: 2016/09/25 14:48:48 by gwells           ###   ########.fr       */
+/*   Updated: 2016/09/25 14:52:02 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ char				*ft_strjoin(char const *s1, char const *s2)
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
+	unsigned int	size;
+	char			*ret;
+
 	if (!s1 && s2)
 		return (ft_strdup(s2));
 	if (!s2 && s1)
@@ -56,10 +59,10 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	else if (s1 && s2)
 	{
 		size = ft_strlen(s1) + ft_strlen(s2) + 1;
-		str = ft_memalloc_fail(size);
-		ft_strcpy(str, s1);
-		ft_strcat(str, s2);
-		return (str);
+		ret = ft_memalloc_fail(size);
+		ft_strcpy(ret, s1);
+		ft_strcat(ret, s2);
+		return (ret);
 	}
 	return (NULL);
 }
