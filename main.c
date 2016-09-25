@@ -23,10 +23,10 @@ int main(void)
 	t_dnode *queue;
 	int		list_size;
 
-	i = 5;
-	x = 8;
-	a = 6;
 	z = 10;
+	a = 6;
+	x = 8;
+	i = 5;
 	t_dlist *circ_list;
 	circ_list = ft_dlstnew();
 	nodei = ft_dlstnewnode_circ(&i, sizeof(int), circ_list); 
@@ -44,11 +44,20 @@ int main(void)
 		printf("value [%i]\n", (*(int*)tmp->content));
 		tmp = tmp->next;
 	}
-	ft_dlstsupress_at(circ_list, nodei, del);
+	//ft_dlstsupress_at(circ_list, nodei, del);
+	/*
+	ft_dlstsupress_at(circ_list, nodex, del);
+	ft_dlstsupress_at(circ_list, nodea, del);
 	ft_dlstsupress_at(circ_list, nodez, del);
+	*/
+	ft_dlstsupress_at(circ_list, nodez, del);
+	ft_dlstsupress_at(circ_list, nodea, del);
 	ft_dlstsupress_at(circ_list, nodex, del);
 	tmp = circ_list->head; 
 	list_size = circ_list->length;
+	printf("lst->head [%p], value [%i]\n", circ_list->head, *(int*)circ_list->head->content);
+	printf("lst->queue [%p], value [%i]\n", circ_list->queue, *(int*)circ_list->queue->content);
+	printf("next [%p], value [%i]\n", tmp->next, *(int*)tmp->next->content);
 	while (tmp && list_size--)
 	{
 		printf("value [%i]\n", (*(int*)tmp->content));

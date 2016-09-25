@@ -6,23 +6,33 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 18:52:00 by gwells            #+#    #+#             */
-/*   Updated: 2016/09/24 22:08:12 by gwells           ###   ########.fr       */
+/*   Updated: 2016/09/25 13:52:55 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 static void handle_extremity(t_dlist *lst, t_dnode *to_supress)
 {
 	if (lst->head == to_supress && lst->queue == to_supress)
 	{
-		lst->head = NULL; lst->queue = NULL;
-		return ;
+		lst->head = NULL; 
+		lst->queue = NULL;
 	}
-	if (lst->head == to_supress)
+	else if (lst->head == to_supress)
+	{
 		lst->head = lst->head->next;
-	if (lst->queue == to_supress)
+		lst->head->prev = lst->queue;
+		if (lst->length == 2)
+			lst->head->next = lst->head;
+	}
+	else if (lst->queue == to_supress)
+	{
 		lst->queue = lst->queue->prev;
+		lst->queue->next = lst->head;
+		if (lst->length == 2)
+			lst->queue->prev = lst->queue;
+	}
 }
 
 void		ft_dlstsupress_at(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t))

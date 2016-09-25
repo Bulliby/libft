@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/09/24 19:23:49 by gwells           ###   ########.fr       */
+/*   Updated: 2016/09/25 13:52:11 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ void				ft_dlstadd(t_dlist *lst, t_dnode *newnode);
 void				ft_dlstdel(t_dnode **alst, void (*del)(void *, size_t));
 void				ft_dlstpushback(t_dlist *list, t_dnode *newnode);
 void				ft_dlstdelone(t_dnode **alst, void (*del)(void *, size_t));
-void				ft_dlstsupress_at(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t));
+void				ft_dlstsupress_at_circ(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t));
 int					get_next_line(int const fd, char **line);
 void				*ft_memalloc_fail(size_t size);
 size_t				words(char const *str, char c);
