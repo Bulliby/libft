@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 18:52:00 by gwells            #+#    #+#             */
-/*   Updated: 2016/09/25 13:52:55 by gwells           ###   ########.fr       */
+/*   Updated: 2016/09/26 15:30:45 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void handle_extremity(t_dlist *lst, t_dnode *to_supress)
 	}
 }
 
-void		ft_dlstsupress_at(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t))
+void		ft_dlstsupress_at_circ(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t))
 {
 	t_dnode *tmp;
 	int		lst_size;
