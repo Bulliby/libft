@@ -6,17 +6,17 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 18:52:00 by gwells            #+#    #+#             */
-/*   Updated: 2016/09/26 15:49:23 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/02 14:11:23 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-static void handle_extremity(t_dlist *lst, t_dnode *to_supress)
+static void	handle_extremity(t_dlist *lst, t_dnode *to_supress)
 {
 	if (lst->head == to_supress && lst->queue == to_supress)
 	{
-		lst->head = NULL; 
+		lst->head = NULL;
 		lst->queue = NULL;
 	}
 	else if (lst->head == to_supress)
@@ -37,12 +37,13 @@ static void handle_extremity(t_dlist *lst, t_dnode *to_supress)
 	}
 }
 
-void		ft_dlstsupress_at_circ(t_dlist *lst, t_dnode *to_supress, void (*del)(void *, size_t))
+void		ft_dlstsupress_at_circ(t_dlist *lst, t_dnode *to_supress,\
+	void (*del)(void *, size_t))
 {
 	t_dnode *tmp;
 	int		lst_size;
 
-	if (lst->head == to_supress || lst->queue ==  to_supress)
+	if (lst->head == to_supress || lst->queue == to_supress)
 		handle_extremity(lst, to_supress);
 	else
 	{

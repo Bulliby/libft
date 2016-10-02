@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/11 11:10:40 by gwells            #+#    #+#             */
-/*   Updated: 2016/05/11 12:36:50 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/02 14:13:02 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char		*ft_strinsert_at(char *str, char c, size_t pos)
 	ft_strncpy(ret, str, pos);
 	ret[pos] = c;
 	ft_strcpy(&ret[pos + 1], &str[pos]);
-	return (ret);	
+	return (ret);
 }

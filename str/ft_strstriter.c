@@ -6,17 +6,17 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 18:44:30 by gwells            #+#    #+#             */
-/*   Updated: 2016/05/02 18:50:55 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/02 14:26:10 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_strstriter(char **strstr, void(*f)(char *str))
+void	ft_strstriter(char **strstr, void (*f)(char *str))
 {
 	if (strstr && f)
 	{
-		while(strstr++)
+		while (strstr++)
 			f(*strstr);
 	}
-}	
+}
