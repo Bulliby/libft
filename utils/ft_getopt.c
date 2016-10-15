@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/15 20:21:54 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/15 21:49:48 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/15 22:41:55 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,21 +102,14 @@ char		*ft_getopt(int argc, char **argv, char *flags)
 
 	i = 1;
 	end = endofflag(argc, argv);
-	printf("end [%i]\n", end);
 	if (!ft_strcmp(argv[end - 1], "--"))
 		end--;
 	if (end <= i)
-	{
-		printf("TUTU\n");
 		return (NULL);
-	}
 	while (i != end)
 	{
 		if(trueflag(argv[i], flags) == false)
-		{
-			printf("TATA\n");
 			return (NULL);
-		}
 		i++;
 	}
 	return (flagtochar(NULL));
