@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/02 14:08:45 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/15 21:27:06 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <string.h>
 # include <stdint.h>
 # include <wchar.h>
+
+typedef enum			e_bool
+{
+	false = 0,
+	true
+}						t_bool;
 
 typedef struct		s_list
 {
@@ -183,6 +189,8 @@ t_dlist				*ft_dlstnew_circ(t_dnode *head, t_dnode *queue);
 void				ft_dlstadd_circ(t_dlist *lst, t_dnode *newnode);
 void				ft_dlstpushback_circ(t_dlist *list, t_dnode *newnode);
 void				ft_init_node_circ(t_dlist *lst, t_dnode *newnode);
+int					endofflag(int ac, char **argv);
+char				*ft_getopt(int ac, char **argv, char *flags);
 
 /*
 ** Pour C++
