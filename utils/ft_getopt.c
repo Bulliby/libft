@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/15 20:21:54 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/15 22:41:55 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/16 01:30:02 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,7 @@ static int			trueflag(char *argv, char *flags)
 
 	flagtochar(argv);
 	if (*argv != '-')
-	{
-		printf("TOTO\n");
 		return (false);
-	}
 	argv++;
 	while (*argv)
 	{
