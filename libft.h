@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/16 02:29:37 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/16 17:07:02 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,6 +191,10 @@ void				ft_dlstpushback_circ(t_dlist *list, t_dnode *newnode);
 void				ft_init_node_circ(t_dlist *lst, t_dnode *newnode);
 int					endofflag(int ac, char **argv);
 char				*ft_getopt(int ac, char **argv, char *flags);
+void				*ft_calloc(size_t count, size_t size);
+void				ft_free(void *ptr);
+void				*ft_realloc(void *ptr, size_t size);
+void				*ft_malloc(size_t size);
 
 /*
 ** Pour C++

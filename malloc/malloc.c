@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 19:11:36 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/16 02:23:09 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/16 17:06:41 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void			*ft_malloc(size_t size)
 {
-	ft_putendl_fd("C BON\n", 2);
 	static int	flag = 0;
 	int			i;
 	t_mem		*s;
