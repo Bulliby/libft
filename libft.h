@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/16 17:07:02 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/17 20:17:14 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,6 +195,7 @@ void				*ft_calloc(size_t count, size_t size);
 void				ft_free(void *ptr);
 void				*ft_realloc(void *ptr, size_t size);
 void				*ft_malloc(size_t size);
+void				ft_freetab(char **argv);
 
 /*
 ** Pour C++
