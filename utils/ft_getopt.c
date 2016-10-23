@@ -6,13 +6,13 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/15 20:21:54 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/16 01:30:02 by gwells           ###   ########.fr       */
+/*   Updated: 2016/10/23 15:26:08 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static int				isflag(int pos, char **argv)
+static int			isflag(int pos, char **argv)
 {
 	if (pos > 1)
 	{
@@ -29,7 +29,7 @@ static int				isflag(int pos, char **argv)
 	return (0);
 }
 
-int				endofflag(int ac, char **argv)
+int					endofflag(int ac, char **argv)
 {
 	int			i;
 
@@ -45,9 +45,9 @@ int				endofflag(int ac, char **argv)
 
 static char			*flagtochar(char *argv)
 {
-	static char	*str = NULL;
-	char		*temp;
-	char		*temp2;
+	static char		*str = NULL;
+	char			*temp;
+	char			*temp2;
 
 	temp = NULL;
 	temp2 = NULL;
@@ -68,8 +68,8 @@ static char			*flagtochar(char *argv)
 
 static int			trueflag(char *argv, char *flags)
 {
-	int			test;
-	int			i;
+	int				test;
+	int				i;
 
 	flagtochar(argv);
 	if (*argv != '-')
@@ -92,20 +92,20 @@ static int			trueflag(char *argv, char *flags)
 	return (true);
 }
 
-char		*ft_getopt(int argc, char **argv, char *flags)
+char				*ft_getopt(int argc, char **argv, char *flags)
 {
-	int		end;
-	int		i;
+	int				end;
+	int				i;
 
 	i = 1;
 	end = endofflag(argc, argv);
 	if (!ft_strcmp(argv[end - 1], "--"))
 		end--;
 	if (end <= i)
-		return (NULL);
+		return (ft_strdup(""));
 	while (i != end)
 	{
-		if(trueflag(argv[i], flags) == false)
+		if (trueflag(argv[i], flags) == false)
 			return (NULL);
 		i++;
 	}
