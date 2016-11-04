@@ -196,6 +196,7 @@ void				ft_free(void *ptr);
 void				*ft_realloc(void *ptr, size_t size);
 void				*ft_malloc(size_t size);
 void				ft_freetab(char **argv);
+void				ft_printtab(char **argv);
 
 /*
 ** Pour C++
