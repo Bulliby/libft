@@ -6,24 +6,37 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/02 14:29:28 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/02 14:29:29 by gwells           ###   ########.fr       */
+/*   Updated: 2016/11/26 11:44:39 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdlib.h>
 
-char	**ft_tabdup(char **tab)
+static int		ft_tablen(char **ft_tab)
 {
-	char	**tab2;
-	int		i;
-	int		len;
+	int			ret;
+
+	ret = 0;
+	while (*ft_tab)
+	{
+		ret++;
+		ft_tab++;
+	}
+	return (ret);
+}
+
+char			**ft_tabdup(char **tab)
+{
+	char		**tab2;
+	int			i;
+	int			len;
 
 	if (tab)
 	{
 		i = 0;
 		len = ft_tablen(tab);
-		if (!(tab2 = (char **)malloc(sizeof(char *) * (len + 1))))
+		if (!(tab2 = (char **)ft_malloc(sizeof(char *) * (len + 1))))
 			return (NULL);
 		while (i < len)
 		{

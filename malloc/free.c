@@ -6,15 +6,15 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/03 11:56:24 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/16 02:23:33 by gwells           ###   ########.fr       */
+/*   Updated: 2016/11/26 11:43:17 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
 
-void		*check_for_free(t_mem *blocks, t_size area, size_t size)
+void				*check_for_free(t_mem *blocks, t_size area, size_t size)
 {
-	t_block	*tmp;
+	t_block			*tmp;
 
 	tmp = (t_block*)blocks->block_start[area];
 	while (tmp)
@@ -30,9 +30,9 @@ void		*check_for_free(t_mem *blocks, t_size area, size_t size)
 	return (NULL);
 }
 
-static void		supress_large_block(t_mem *blocks, t_block *blk)
+static void			supress_large_block(t_mem *blocks, t_block *blk)
 {
-	t_block	*tmp;
+	t_block			*tmp;
 
 	tmp = (t_block*)blocks->block_start[LARGE];
 	while (tmp->next && tmp->next != blk)
@@ -43,11 +43,11 @@ static void		supress_large_block(t_mem *blocks, t_block *blk)
 		tmp->next = blk->next;
 }
 
-void		ft_free(void *ptr)
+void				ft_free(void *ptr)
 {
-	t_mem	*blocks;
-	t_size	range;
-	t_block *blk;
+	t_mem			*blocks;
+	t_size			range;
+	t_block			*blk;
 
 	blocks = singleton();
 	blk = ((t_block*)(((char*)ptr) - sizeof(t_block) - 1));
@@ -55,12 +55,11 @@ void		ft_free(void *ptr)
 	is_allocated((t_block*)blocks->block_start[range], (char*)ptr))
 	{
 		if (range != LARGE)
-			blk->free= true;
+			blk->free = true;
 		else
 		{
 			supress_large_block(blocks, blk);
 			munmap(blk + 1, blk->size + sizeof(t_block));
 		}
 	}
-		
 }
