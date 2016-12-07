@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/17 20:17:14 by gwells           ###   ########.fr       */
+/*   Updated: 2016/12/07 13:00:04 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,7 +182,6 @@ char				*ft_strrpbrk(const char *s1, const char *s2);
 int					ft_cntc(char *str, char c);
 char				**ft_strsplit_ws(char const *s);
 char				**ft_tabdup(char **ft_tab);
-int					ft_tablen(char **ft_tab);
 t_dnode				*ft_dlstnewnode_circ(void const *content,\
 		size_t content_size, t_dlist *lst);
 t_dlist				*ft_dlstnew_circ(t_dnode *head, t_dnode *queue);
