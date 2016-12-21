@@ -3,11 +3,22 @@
 #include "libft.h"
 #include <stdio.h>
 
+int		diff(void * const a, void * const b)
+{
+	if (ft_strcmp(a , b) > 0)
+		return (1);
+	return (0);
+}
+
 int main(int argc, char **argv)
 {
-	char		str[42];
+	int	i;
 
-	memset(str, '\0', sizeof(str));
-	strcpy(str, "toto est beau");
-	ft_puthexa(str, sizeof(str));
+	i = 0;
+	while (i != argc)
+	{
+		ft_qsort(*argv, argc -1, sizeof(char*), &diff);
+		ft_printtab(argv);
+		i++;
+	}
 }
