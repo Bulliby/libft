@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 static void			norme(t_dlist *lst, t_dnode *temp, t_dnode *newnode)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "malloc.h"
+#include "libft.h"
 
 t_bool			is_allocated(t_block *start, char *ptr)
 {

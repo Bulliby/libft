@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "malloc.h"
+#include "libft.h"
 
 void				*check_for_free(t_mem *blocks, t_size area, size_t size)
 {

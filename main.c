@@ -1,13 +1,15 @@
-/*Test of circ list*/
-
-#include "libft.h"
+#include "includes/libft.h"
 #include <stdio.h>
+
+void	error(void)
+{
+	ft_printf("error\n");
+}	
 
 int main(int argc, char **argv)
 {
-	char		str[42];
-
-	memset(str, '\0', sizeof(str));
-	strcpy(str, "toto est beau");
-	ft_puthexa(str, sizeof(str));
+	(void)argc;
+	printf("[%i]\n",  ft_atoi_protected(argv[1], error));
+	ft_printf("[%i]\n",  ft_atoi_protected(argv[1], error));
+	return (0);
 }

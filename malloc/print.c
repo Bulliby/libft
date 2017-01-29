@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "malloc.h"
+#include "libft.h"
 
 static int		putnchar(char c, int n)
 {
@@ -43,7 +43,7 @@ static void		putnbrbase(uintmax_t nbr, char *base, size_t base_len)
 		putnchar(base[nbr], 1);
 }
 
-void			conv_p(intmax_t adress)
+void			conv_p_malloc(intmax_t adress)
 {
 	int			len;
 

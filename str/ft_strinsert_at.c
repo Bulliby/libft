@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 char		*ft_strinsert_at(char *str, char c, size_t pos)
 {

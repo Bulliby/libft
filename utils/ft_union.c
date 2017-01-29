@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 #include <string.h>
 
 static int			count_or_place(char *argv, size_t *pos, char *str, int func)

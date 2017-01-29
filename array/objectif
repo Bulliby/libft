@@ -1,0 +1,11 @@
+Le but va etre de creer un tableau :
+	- qui peut contenir des variables de differents type
+	_ qui peut s'agrandir de maniere automatique...
+Je ne vais pas m'amuser a coder des fonctions me permetant l'ajout a une case N du tableau car bcp trop gourmande en ressource (je prefere les listes chaines)
+Je creer une structure pour chaque case du tableau contenant :
+	- un void * representant l'adresse de l'element
+	- un size_t contenant la taille de l'element.
+Je cree egalement une structure contenant les infos de chaque tableau avec pour champ : 
+	- le nombre de cases alloue
+	_ le nombre de cases courant
+Si le nombre de case courant depasse le nombre de case alloue j'etends le tableau a l'aide de ma fonction.

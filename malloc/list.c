@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "malloc.h"
+#include "libft.h"
 
 static t_bool	block_too_large(t_mem *blocks, t_size area, size_t size)
 {

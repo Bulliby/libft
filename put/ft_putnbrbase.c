@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_putnbrbase(uintmax_t nbr, char *base, size_t base_len)
 {

@@ -21,8 +21,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# include "../libft.h"
-
 # define TINY_BLOCK 512 * getpagesize()
 # define SMALL_BLOCK 4096 * getpagesize()
 # define TINY_LIMIT 992

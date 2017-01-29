@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 void	ft_init_node_circ(t_dlist *lst, t_dnode *newnode)
 {

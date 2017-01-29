@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "malloc.h"
+#include "libft.h"
 
 void				*add_large_stock(t_mem *blocks, size_t size)
 {

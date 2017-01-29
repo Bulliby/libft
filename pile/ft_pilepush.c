@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void		ft_pilepush(t_pile **pile, t_pile *newnode)
 {

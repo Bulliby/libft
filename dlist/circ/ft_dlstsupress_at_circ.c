@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static void	handle_extremity(t_dlist *lst, t_dnode *to_supress)
 {

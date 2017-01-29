@@ -1,0 +1,66 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gwells <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2014/11/19 16:35:04 by gwells            #+#    #+#              #
+#    Updated: 2016/10/05 19:14:21 by gwells           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	=	libftprintf.a
+
+LIBFT_DIRS	= $(shell find . -type d -follow -print)
+LIBFT_SRC	= $(shell find . ! -name  'main.c'  -type f -follow -print | grep -w "[.c]$$")
+OBJ_LIBFT	= $(LIBFT_SRC:.c=.o)
+	
+SRC			= ft_printf.c \
+			  list.c \
+			  split.c \
+			  parsing.c\
+			  ptrfunc.c\
+			  get_number.c\
+			  conv_gen.c\
+			  conv_ooxx.c \
+			  conv_scc.c \
+			  conv_uunop.c \
+			  conv_s.c \
+			  print.c \
+			  print_wchar.c
+
+PRINT_PATH = ./print/
+SAVE_PATH  = ./save/
+
+SPRINT   = $(addprefix $(PRINT_PATH), $(PRINT))
+SSAVE    = $(addprefix $(SAVE_PATH), $(SAVE))
+
+OSAVE	= $(SSAVE:.c=.o)
+OPRINT  = $(SPRINT:.c=.o)
+OBJ		= $(SRC:.c=.o)
+
+CC		= gcc
+CFLAGS	= -g -Wall -Wextra -Werror
+
+# *************************************************************************** #
+
+all: $(NAME)
+
+submodule :
+	git submodule init libft
+	git submodule update --remote libft
+
+$(NAME): $(OBJ) $(OSAVE) $(OPRINT) $(OBJ_LIBT)
+	make -C libft
+	ar -rc $(NAME) $(OBJ) $(OSAVE) $(OPRINT) $(OBJ_LIBFT) && ranlib $(NAME)
+
+clean:
+	rm -rf $(OBJ) $(OSAVE) $(OPRINT) $(OBJ_LIBFT)
+
+fclean: clean 
+	rm -rf $(NAME)
+
+re: fclean $(NAME) 
+
+.PHONY: clean re fclean all

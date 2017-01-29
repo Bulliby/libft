@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 t_dlist		*ft_dlstnew_circ(t_dnode *head, t_dnode *queue)

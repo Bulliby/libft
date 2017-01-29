@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 #define BASE 16
 
