@@ -38,6 +38,10 @@ typedef enum			e_bool
 /*
 ** array
 */
+
+#define	SIZE 1024
+#define ARRAY_DEFAULT_ALLOC SIZE * sizeof(t_array)
+
 typedef struct		s_array
 {
 	void			*content;
@@ -46,13 +50,29 @@ typedef struct		s_array
 
 typedef struct		s_mdata_array
 {
-	void			*start;
+	t_array			**start;
 	size_t			nb_alloc;
 	size_t			nb_cases;
 }					t_mdata_array;
 
-t_mdata_array		ft_createarray(size_t nb_cases, size_t nb_alloc);
-
+t_mdata_array		*ft_arrayinit(size_t nb_cases);
+void				ft_arrayset(size_t index, t_mdata_array *md, t_array *ft_case);
+t_array				*ft_arraycreate(void *content, size_t content_size); 
+void				ft_arraysupress(t_mdata_array *md, size_t index,\
+						void (*supress_func)(t_array **start, size_t nb_cases,\
+							size_t index));
+void				ft_unsorted_supress(t_array **start, size_t nb_cases, \
+						size_t index);
+void				ft_sorted_supress(t_array **start, size_t nb_cases,\
+						size_t index);
+void				ft_arrayiter(t_array **start, size_t nb_cases, \
+						void (*f)(t_array *elem));
+void				ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index);
+void				ft_arraydestroy(t_mdata_array *md);
+void				free_array_elem(t_array *elem);
+void				ft_arrayextend(t_mdata_array *md);
+void				ft_arraycontract(t_mdata_array *md);
+ 
 /*
 ** dlist
 */ 
