@@ -7,7 +7,7 @@ void			ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index)
 
 	if (index >= md->nb_cases + 1)
 		return ;
-	if (!md->nb_cases % SIZE)
+	if (!(md->nb_cases % SIZE))
 		ft_arrayextend(md);
 	tmp = md->start[index];
 	md->start[index] = elem;

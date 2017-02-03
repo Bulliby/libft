@@ -5,7 +5,7 @@ void			ft_sorted_supress(t_array **start, size_t nb_cases,\
 {
 	free(start[index]->content);
 	free(start[index]);
-	while  (index != nb_cases)
+	while  (index + 1 != nb_cases)
 	{
 		start[index] = start[index + 1];
 		index++;

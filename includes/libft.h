@@ -40,7 +40,7 @@ typedef enum			e_bool
 */
 
 #define	SIZE 1024
-#define ARRAY_DEFAULT_ALLOC SIZE * sizeof(t_array)
+#define ARRAY_DEFAULT_ALLOC SIZE * sizeof(t_array*)
 
 typedef struct		s_array
 {
@@ -69,9 +69,9 @@ void				ft_arrayiter(t_array **start, size_t nb_cases, \
 						void (*f)(t_array *elem));
 void				ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index);
 void				ft_arraydestroy(t_mdata_array *md);
-void				free_array_elem(t_array *elem);
 void				ft_arrayextend(t_mdata_array *md);
 void				ft_arraycontract(t_mdata_array *md);
+void				free_elem_and_content(t_array *elem);
  
 /*
 ** dlist

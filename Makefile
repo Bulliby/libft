@@ -22,7 +22,7 @@ OBJ_FILES	= $(SRC:.c=.o)
 OBJ			= $(addprefix $(OBJ_PATH), $(OBJ_FILES))
 
 CC			= gcc 
-CFLAGS		= -Wall -Wextra -Werror -g
+CFLAGS		=  -g #-Wall -Wextra -Werror -g
 INCLUDES	= -I./includes
 
 # **************************************************************************** #
