@@ -3,9 +3,8 @@
 static void		swap(t_mdata_pq *md, size_t index)
 {
 	if (index > 1 && md->cmp(md->start[index]->content, \
-		md->start[index / 2]->content) >= 0)
+		md->start[index / 2]->content) <= 0)
 	{
-		printf("swap\n");
 		ft_pqswap(md->start, index, index / 2);
 		swap(md, index / 2);
 	}
@@ -17,7 +16,5 @@ void			ft_pqadd(t_mdata_pq *md, t_array *elem)
 		printf("Il va falloir s'agrandir\n");
 	md->start[md->nb_cases + 1] = elem;
 	md->nb_cases++;
-	printf("nb cases [%i]\n", md->nb_cases);
 	swap(md, md->nb_cases);
-	printf("nb cases [%i]\n", md->nb_cases);
 }

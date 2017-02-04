@@ -86,8 +86,8 @@ typedef struct		s_mdata_pq
 
 t_mdata_pq			*ft_pqinit(size_t nb_cases, int (*cmp)(void *, void *));
 void				ft_pqadd(t_mdata_pq *md, t_array *elem);
-t_array				*ft_pqgetfather(t_array **start, size_t child_index);
 void				ft_pqswap(t_array **start, size_t a, size_t b);
+void				ft_pqsupress(t_mdata_pq *md);
 
 /*
 ** dlist
