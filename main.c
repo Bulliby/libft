@@ -5,41 +5,30 @@ static void				print_array(t_array *elem)
 	printf("%i", *(int*)elem->content);
 }
 
+static int				cmp_pq(void *a, void *b)
+{
+	if (*(int*)a >= *(int*)b)
+		return (*(int*)a - *(int*)b);
+	else
+		return (*(int*)a - *(int*)b);
+}
+
 int					main(int argc, char **argv)
 {
-	t_mdata_array	*md;
-	t_array			*array;
-	int				toto;
-	size_t			i;
+	t_mdata_pq	*md;
+	int			toto;
 
-	i = 0;
-	toto = 5;
-	md = ft_arrayinit(1023);
-	/*
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 0);
-	toto = 4;
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 1);
 	toto = 6;
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 2);
-	toto = 7;
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayiter(md->start, md->nb_cases, print_array);
-	ft_arraysupress(md, 2, ft_sorted_supress);
-	ft_arrayiter(md->start, md->nb_cases, print_array);
-	ft_arraydestroy(md);
-	*/
-	while (i != SIZE)
-	{
-		ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), i);
-		i++;
-	}
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayadd(md, ft_arraycreate(&toto, sizeof(int)), 3);
-	ft_arrayiter(md->start, md->nb_cases, print_array);
-	ft_arraydestroy(md);
+	md = ft_pqinit(10, cmp_pq);
+	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
+	toto = 5;
+	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
+	toto = 10;
+	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
+	toto = 2;
+	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
+	toto = 20;
+	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
+	ft_pqiter(md->start, md->nb_cases, print_array);
 	return (0);
 }

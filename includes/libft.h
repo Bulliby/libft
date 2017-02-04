@@ -72,7 +72,23 @@ void				ft_arraydestroy(t_mdata_array *md);
 void				ft_arrayextend(t_mdata_array *md);
 void				ft_arraycontract(t_mdata_array *md);
 void				free_elem_and_content(t_array *elem);
- 
+
+/*
+** priority queue
+*/
+typedef struct		s_mdata_pq
+{
+	t_array			**start;
+	size_t			nb_alloc;
+	size_t			nb_cases;
+	int				(*cmp)(void *, void*);
+}					t_mdata_pq;
+
+t_mdata_pq			*ft_pqinit(size_t nb_cases, int (*cmp)(void *, void *));
+void				ft_pqadd(t_mdata_pq *md, t_array *elem);
+t_array				*ft_pqgetfather(t_array **start, size_t child_index);
+void				ft_pqswap(t_array **start, size_t a, size_t b);
+
 /*
 ** dlist
 */ 
