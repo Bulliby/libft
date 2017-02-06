@@ -13,7 +13,7 @@ static void		swap(t_mdata_pq *md, size_t index)
 void			ft_pqadd(t_mdata_pq *md, t_array *elem)
 {
 	if (md->nb_cases && !(md->nb_cases % SIZE))
-		printf("Il va falloir s'agrandir\n");
+		ft_arrayextend((t_mdata_array *)md);
 	md->start[md->nb_cases + 1] = elem;
 	md->nb_cases++;
 	swap(md, md->nb_cases);
