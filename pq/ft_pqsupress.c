@@ -16,7 +16,7 @@ static size_t		get_index_lil_child(t_mdata_pq *md, size_t index)
 {
 	size_t			ret;
 
-	if (index * 2 + 1 <= md->nb_cases && md->cmp(md->start[index * 2]->content,\
+	if (index * 2 + 1 < md->nb_cases && md->cmp(md->start[index * 2]->content,\
 		md->start[index * 2 + 1]->content) >= 0)
 		ret = index * 2 + 1;
 	else
@@ -28,7 +28,7 @@ static void			swap(t_mdata_pq *md, size_t index)
 {
 	size_t			lil_child;
 
-	if (index * 2 <= md->nb_cases)
+	if (index * 2 + 1< md->nb_cases)
 	{
 		lil_child = get_index_lil_child(md, index);
 		if (lil_child <= md->nb_cases && md->cmp(md->start[index]->content, \
@@ -42,7 +42,7 @@ static void			swap(t_mdata_pq *md, size_t index)
 
 void				ft_pqsupress(t_mdata_pq *md)
 {
-	ft_pqswap(md->start, 1, md->nb_cases);
+	ft_pqswap(md->start, 1, md->nb_cases - 1);
 	md->nb_cases--;
 	swap(md, 1);
 }

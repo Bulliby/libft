@@ -90,7 +90,6 @@ void				ft_pqswap(t_array **start, size_t a, size_t b);
 void				ft_pqsupress(t_mdata_pq *md);
 void				ft_pqiter(t_array **start, size_t nb_cases,\
 					void (*f)(t_array *elem));
-void				ft_pqextend(t_mdata_pq *md);
 
 /*
 ** dlist

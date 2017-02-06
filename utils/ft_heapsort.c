@@ -16,7 +16,7 @@ t_mdata_array			*ft_heapsort(t_mdata_pq *md)
 {
 	t_mdata_array		*ret;
 
-	ret = ft_arrayinit(md->nb_cases);
+	ret = ft_arrayinit(100);
 	while (md->nb_cases > 0)
 	{	
 		ft_arrayadd(ret, ft_arraycreate(md->start[1]->content, md->start[1]\
