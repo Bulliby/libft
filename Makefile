@@ -6,7 +6,7 @@
 #    By: gwells <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/11 00:09:30 by gwells            #+#    #+#              #
-#    Updated: 2016/11/25 14:13:14 by gwells           ###   ########.fr        #
+#    Updated: 2017/02/06 14:31:02 by gwells           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJ_FILES	= $(SRC:.c=.o)
 OBJ			= $(addprefix $(OBJ_PATH), $(OBJ_FILES))
 
 CC			= gcc 
-CFLAGS		=  -g #-Wall -Wextra -Werror -g
+CFLAGS		= -Wall -Wextra -Werror -g
 INCLUDES	= -I./includes
 
 # **************************************************************************** #
