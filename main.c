@@ -7,7 +7,7 @@ static void				print_array(t_array *elem)
 
 static int				cmp_pq(void *a, void *b)
 {
-	return (*(int*)b - *(int*)a);
+	return (*(int*)a - *(int*)b);
 }
 
 int					main(int argc, char **argv)
@@ -32,7 +32,7 @@ int					main(int argc, char **argv)
 	}
 //	array = ft_heapsort(pq);
 //	ft_arrayiter(array->start, array->nb_cases, print_array);
-	//ft_pqiter(pq->start, pq->nb_cases, print_array);
+	ft_pqiter(pq->start, pq->nb_cases, print_array);
 }
 
 /*

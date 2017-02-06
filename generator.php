@@ -1,15 +1,15 @@
 <?php
 
-$tab = [];
+$tab = array();
 
-$value  = rand (0, 100000000);
+$value  = rand (0, 10000000000);
 $i = 0;
 
-while ($i != 10000)
+while ($i != 1026)
 {
 	while (already_exist($value, $tab))
 	{
-		$value  = rand (0, 100000000);
+		$value  = rand (0, 10000000000);
 	}
 	$tab [] = $value;
 	$i++;

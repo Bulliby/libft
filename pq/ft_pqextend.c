@@ -4,6 +4,7 @@ void			ft_pqextend(t_mdata_pq *md)
 {
 	t_array			**new_start;
 
+	printf("extend\n");
 	if (md->nb_cases && !(md->nb_cases % SIZE))
 	{
 		md->nb_alloc++;
