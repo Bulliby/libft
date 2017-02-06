@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/06 15:37:25 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/06 15:46:08 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void				ft_pqswap(t_array **start, size_t a, size_t b);
 void				ft_pqsupress(t_mdata_pq *md);
 void				ft_pqiter(t_array **start, size_t nb_cases,\
 					void (*f)(t_array *elem));
+void				ft_pqextend(t_mdata_pq *md);
 
 /*
 ** dlist

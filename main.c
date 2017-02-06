@@ -10,7 +10,6 @@ static int				cmp_pq(void *a, void *b)
 	return (*(int*)b - *(int*)a);
 }
 
-/*
 int					main(int argc, char **argv)
 {
 	int				i;
@@ -31,11 +30,12 @@ int					main(int argc, char **argv)
 		ft_pqadd(pq, ft_arraycreate(&tmp, sizeof(int)));
 		i++;
 	}
-	array = ft_heapsort(pq);
-	ft_arrayiter(array->start, array->nb_cases, print_array);
+//	array = ft_heapsort(pq);
+//	ft_arrayiter(array->start, array->nb_cases, print_array);
+	//ft_pqiter(pq->start, pq->nb_cases, print_array);
 }
-*/
 
+/*
 int					main(int argc, char **argv)
 {
 	int				i;
@@ -57,3 +57,4 @@ int					main(int argc, char **argv)
 	}
 	ft_arrayiter(array->start, array->nb_cases, print_array);
 }
+*/
