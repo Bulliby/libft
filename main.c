@@ -10,66 +10,50 @@ static int				cmp_pq(void *a, void *b)
 	return (*(int*)b - *(int*)a);
 }
 
+/*
 int					main(int argc, char **argv)
 {
-	t_mdata_pq		*md;
-	t_mdata_array	*md2;
-	int				toto;
+	int				i;
+	int				tmp;
+	t_mdata_array	*array;
+	t_mdata_pq		*pq;
+	
+	i = 1;
+	pq = ft_pqinit(100, cmp_pq);
+	if (argc == 1)
+	{
+		printf("Entrez des arguments a trier\n");
+		exit(42);
+	}
+	while (i != argc)
+	{
+		tmp = ft_atoi(argv[i]);
+		ft_pqadd(pq, ft_arraycreate(&tmp, sizeof(int)));
+		i++;
+	}
+	array = ft_heapsort(pq);
+	ft_arrayiter(array->start, array->nb_cases, print_array);
+}
+*/
 
-	toto = 4;
-	md = ft_pqinit(100, cmp_pq);
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 5;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 8;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 11;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 11;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 11;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 10;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 6;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 13;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 12;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 10;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 45;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 32;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 29;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 68;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 22;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 3;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 7;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 70;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 33;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 71;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 0;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 90;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 83;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 86;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	toto = 69;
-	ft_pqadd(md, ft_arraycreate(&toto, sizeof(int)));
-	md2 = ft_heapsort(md);
-	ft_arrayiter(md2->start, md2->nb_cases, print_array);
-	return (0);
+int					main(int argc, char **argv)
+{
+	int				i;
+	int				tmp;
+	t_mdata_array	*array;
+	
+	i = 1;
+	array = ft_arrayinit(100);
+	if (argc == 1)
+	{
+		printf("Entrez des arguments a trier\n");
+		exit(42);
+	}
+	while (i != argc)
+	{
+		tmp = ft_atoi(argv[i]);
+		ft_arrayadd(array, ft_arraycreate(&tmp, sizeof(int)), 0);
+		i++;
+	}
+	ft_arrayiter(array->start, array->nb_cases, print_array);
 }

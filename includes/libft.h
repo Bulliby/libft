@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/06 14:25:00 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/06 15:37:25 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ void				ft_arrayiter(t_array **start, size_t nb_cases, \
 						void (*f)(t_array *elem));
 void				ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index);
 void				ft_arraydestroy(t_mdata_array *md);
-void				ft_arrayextend(t_mdata_array *md);
 void				ft_arraycontract(t_mdata_array *md);
 void				free_elem_and_content(t_array *elem);
+void				ft_arrayextend(t_mdata_array *md);
 
 /*
 ** priority queue
