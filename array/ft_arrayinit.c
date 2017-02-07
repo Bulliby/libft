@@ -12,15 +12,13 @@
 
 #include "libft.h"
 
-/*
-t_array				*ft_arrayinit(size_t nb_cases)
+t_array				*ft_arrayinit()
 {
 	t_array			*ret;
 
 	ret = ft_memalloc_fail(sizeof(t_array));
 	ret->alloc = 0;
 	ret->len = 0;
-	ret-> = NULL;
+	ret->data = NULL;
 	return (ret);
 }
-*/
