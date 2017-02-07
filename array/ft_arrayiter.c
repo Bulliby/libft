@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
 
 void			ft_arrayiter(t_array **start, size_t nb_cases,\
 				void (*f)(t_array *elem))
@@ -24,3 +25,4 @@ void			ft_arrayiter(t_array **start, size_t nb_cases,\
 		i++;
 	}	
 }
+*/

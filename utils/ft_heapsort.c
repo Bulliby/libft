@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 t_mdata_array			*ft_heapsort(t_mdata_pq *md)
 {
 	t_mdata_array		*ret;
@@ -24,4 +25,4 @@ t_mdata_array			*ft_heapsort(t_mdata_pq *md)
 		ft_pqsupress(md);
 	}
 	return (ret);
-}
+}*/

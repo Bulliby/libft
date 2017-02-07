@@ -36,28 +36,25 @@ typedef enum			e_bool
 */
 
 /*
-** array
+** generic array
 */
 
 #define	SIZE 1024
-#define ARRAY_DEFAULT_ALLOC SIZE * sizeof(t_array*)
+#define	ARRAY_DEFAULT_ALLOC SIZE * sizeof(void*)
 
 typedef struct		s_array
 {
-	void			*content;
-	size_t			content_size;
+	void			**data;
+	size_t			len;
+	size_t			alloc;
 }					t_array;
 
-typedef struct		s_mdata_array
-{
-	t_array			**start;
-	size_t			nb_alloc;
-	size_t			nb_cases;
-}					t_mdata_array;
-
-t_mdata_array		*ft_arrayinit(size_t nb_cases);
-void				ft_arrayset(size_t index, t_mdata_array *md, t_array *ft_case);
-t_array				*ft_arraycreate(void *content, size_t content_size); 
+t_array				*ft_arrayinit(void);
+void				ft_arrayset(t_array *array, size_t index, void *data);
+void				ft_arrayextend(t_array *array, size_t index);
+/*
+void				ft_arrayiter(t_array **start, size_t nb_cases, \
+						void (*f)(t_array *elem));
 void				ft_arraysupress(t_mdata_array *md, size_t index,\
 						void (*supress_func)(t_array **start, size_t nb_cases,\
 							size_t index));
@@ -65,14 +62,12 @@ void				ft_unsorted_supress(t_array **start, size_t nb_cases, \
 						size_t index);
 void				ft_sorted_supress(t_array **start, size_t nb_cases,\
 						size_t index);
-void				ft_arrayiter(t_array **start, size_t nb_cases, \
-						void (*f)(t_array *elem));
 void				ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index);
 void				ft_arraydestroy(t_mdata_array *md);
 void				ft_arraycontract(t_mdata_array *md);
 void				free_elem_and_content(t_array *elem);
-void				ft_arrayextend(t_mdata_array *md);
 
+*/
 /*
 ** priority queue
 */
@@ -195,6 +190,7 @@ void				*ft_memalloc_fail(size_t size);
 int					**ft_alloc_2d_int_tab(int x, int y);
 char				**ft_tabdup(char **ft_tab);
 void				ft_freetab(char **argv);
+void				*ft_malloc_fail(size_t size);
 
 /*
 ** pile
@@ -297,7 +293,7 @@ void				ft_isort(void *ft_tab, size_t nb_elem, size_t size_elem,\
 					int(*diff)(void const *a, void const *b));
 int					endofflag(int ac, char **argv);
 char				*ft_getopt(int ac, char **argv, char *flags);
-t_mdata_array		*ft_heapsort(t_mdata_pq *md);
+//t_mdata_array		*ft_heapsort(t_mdata_pq *md);
 
 /*
 ** Pour C++

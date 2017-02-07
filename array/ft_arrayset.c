@@ -1,12 +1,10 @@
 #include "libft.h"
 
-void				ft_arrayset(size_t index, t_mdata_array *md, t_array *ft_case)
+void				ft_arrayset(t_array *array, size_t index, void *data)
 {
-	if (index < md->nb_cases)
-	{
-		free(md->start[index]);
-		md->start[index] = ft_case;
-	}
-	else
-		ft_putstr_fd("ft_arrayset : index makes write error", 2);
+	if (index >= array->alloc)
+		ft_arrayextend(array, index);
+	if (index >= array->len)
+		array->len = index + 1;
+	array->data[index] = data;
 }

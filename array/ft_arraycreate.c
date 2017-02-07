@@ -1,5 +1,6 @@
 #include "libft.h"
 
+/*
 t_array				*ft_arraycreate(void *content, size_t content_size)
 {
 	t_array			*ret;
@@ -10,3 +11,4 @@ t_array				*ft_arraycreate(void *content, size_t content_size)
 	ret->content_size = content_size;
 	return (ret);
 }
+*/

@@ -1,5 +1,6 @@
 #include "libft.h"
 
+/*
 void		free_elem_and_content(t_array *elem)
 {
 	free(elem->content);
@@ -12,3 +13,4 @@ void			ft_arraydestroy(t_mdata_array *md)
 	free(md->start);
 	free(md);	
 }
+*/

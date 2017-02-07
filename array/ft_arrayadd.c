@@ -1,5 +1,6 @@
 #include "libft.h"
 
+/*
 void			ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index)
 {
 	t_array		*tmp;
@@ -20,3 +21,4 @@ void			ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index)
 	}
 	md->nb_cases++;
 }
+*/

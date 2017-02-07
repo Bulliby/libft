@@ -33,27 +33,3 @@ int					main(int argc, char **argv)
 	array = ft_heapsort(pq);
 	ft_arrayiter(array->start, array->nb_cases, print_array);
 }
-
-/*
-int					main(int argc, char **argv)
-{
-	int				i;
-	int				tmp;
-	t_mdata_array	*array;
-	
-	i = 1;
-	array = ft_arrayinit(100);
-	if (argc == 1)
-	{
-		printf("Entrez des arguments a trier\n");
-		exit(42);
-	}
-	while (i != argc)
-	{
-		tmp = ft_atoi(argv[i]);
-		ft_arrayadd(array, ft_arraycreate(&tmp, sizeof(int)), 0);
-		i++;
-	}
-	ft_arrayiter(array->start, array->nb_cases, print_array);
-}
-*/

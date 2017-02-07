@@ -1,5 +1,6 @@
 #include "libft.h"
 
+/*
 void			ft_sorted_supress(t_array **start, size_t nb_cases,\
 			size_t index)
 {
@@ -11,3 +12,4 @@ void			ft_sorted_supress(t_array **start, size_t nb_cases,\
 		index++;
 	}
 }
+*/

@@ -1,5 +1,6 @@
 #include "libft.h"
 
+/*
 void			ft_arraycontract(t_mdata_array *md)
 {
 	t_array		**new_start;		
@@ -11,3 +12,4 @@ void			ft_arraycontract(t_mdata_array *md)
 	free(md->start);
 	md->start = new_start;
 }
+*/

@@ -1,15 +1,13 @@
 #include "libft.h"
 
-void				ft_arrayextend(t_mdata_array *md)
+void				ft_arrayextend(t_array *array, size_t index)
 {
-	t_array			**new_start;
-
-	if (md->nb_cases && !(md->nb_cases % SIZE))
-	{
-		md->nb_alloc++;
-		new_start = ft_memalloc_fail(md->nb_alloc * ARRAY_DEFAULT_ALLOC);
-		ft_memcpy(new_start, md->start, (md->nb_alloc - 1) * ARRAY_DEFAULT_ALLOC);
-		free(md->start);
-		md->start = new_start;
-	}
+	void			**newdata;
+	size_t			new_size;
+	
+	new_size = index * 2;
+	newdata = ft_memalloc_fail(new_size * sizeof(void*));
+	ft_memcpy(newdata, array->data, array->alloc);	
+	array->alloc = new_size;
+	free(array->data);
 }
