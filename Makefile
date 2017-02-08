@@ -33,6 +33,7 @@ OBJ_UTILS 	= 	ft_alloc_2d_int.o\
 				ft_tabdup.o\
 				ft_union.o\
 				get_next_line.o\
+				ft_selectsort.o\
 
 OBJ_ARRAY	=	ft_arrayadd.o\
 				ft_arrayextend.o\

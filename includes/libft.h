@@ -282,6 +282,8 @@ void				ft_isort(void *ft_tab, size_t nb_elem, size_t size_elem,\
 int					endofflag(int ac, char **argv);
 char				*ft_getopt(int ac, char **argv, char *flags);
 t_array				*ft_heapsort(t_pq *md);
+t_array				*ft_selectsort(t_array *base, size_t (*select)\
+					(void **data, const size_t len));
 
 /*
 ** Pour C++
