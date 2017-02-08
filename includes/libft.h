@@ -200,10 +200,6 @@ size_t				ft_pilesize(t_pile *pile);
 t_pile				*ft_piletail(t_pile *pile);
 
 /*
-** priority_queue
-*/
-
-/*
 ** put
 */
 void				ft_putchar(char c);
@@ -284,6 +280,7 @@ char				*ft_getopt(int ac, char **argv, char *flags);
 t_array				*ft_heapsort(t_pq *md);
 t_array				*ft_selectsort(t_array *base, size_t (*select)\
 					(void **data, const size_t len));
+void				ft_printtime(t_bool start);
 
 /*
 ** Pour C++

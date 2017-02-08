@@ -1,7 +1,7 @@
 NAME		= 	libft.a
 
 CC			= 	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra  -O3
 
 INCLUDES	= 	-I./includes
 SRC_ARRAY	= 	./array/
@@ -34,6 +34,7 @@ OBJ_UTILS 	= 	ft_alloc_2d_int.o\
 				ft_union.o\
 				get_next_line.o\
 				ft_selectsort.o\
+				ft_printtime.o\
 
 OBJ_ARRAY	=	ft_arrayadd.o\
 				ft_arrayextend.o\
