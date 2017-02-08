@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/08 09:26:33 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/08 10:53:16 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ typedef struct		s_pq
 	int				(*cmp)(void *, void*);
 }					t_pq;
 
-t_mdata_pq			*ft_pqinit(size_t len, int (*cmp)(void *, void *));
+t_pq				*ft_pqinit(size_t len, int (*cmp)(void *, void *));
 void				ft_pqadd(t_pq *pq, void *elem);
 void				ft_pqswap(void **data, size_t a, size_t b);
 void				ft_pqsupress(t_pq *pq);
-void				ft_pqiter(t_array **start, size_t nb_cases,\
-					void (*f)(t_array *elem));
+void				ft_pqiter(void **data, size_t len,\
+					void (*f)(void *elem));
 
 /*
 ** dlist
@@ -281,7 +281,7 @@ void				ft_isort(void *ft_tab, size_t nb_elem, size_t size_elem,\
 					int(*diff)(void const *a, void const *b));
 int					endofflag(int ac, char **argv);
 char				*ft_getopt(int ac, char **argv, char *flags);
-//t_mdata_array		*ft_heapsort(t_mdata_pq *md);
+t_array				*ft_heapsort(t_pq *md);
 
 /*
 ** Pour C++

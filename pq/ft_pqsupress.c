@@ -6,24 +6,24 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 14:18:16 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/08 09:30:25 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/08 10:55:46 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		get_index_lil_child(t_pqata_pq *pq, size_t index)
+static size_t		get_index_lil_child(t_pq *pq, size_t index)
 {
 	size_t			ret;
 
-	if (pq->cmp(pq->data[index * 2], pq->data[index * 2 + 1] >= 0)
+	if (pq->cmp(pq->data[index * 2], pq->data[index * 2 + 1]) >= 0)
 		ret = index * 2 + 1;
 	else
 		ret = index * 2;
 	return (ret);
 }
 
-static void			swap(t_pqata_pq *pq, size_t index)
+static void			swap(t_pq *pq, size_t index)
 {
 	size_t			lil_child;
 

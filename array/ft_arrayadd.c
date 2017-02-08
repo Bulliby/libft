@@ -5,9 +5,9 @@ void			ft_arrayadd(t_array *array, void *data, size_t index)
 	void		*tmp;
 	void		*tmp2;
 
-	if (index >= array->len + 1)
+	if (array->len && index > array->len)
 		return ;
-	if (array->len && !(array->len % SIZE))
+	if (!(array->len % SIZE))
 		ft_arrayextend(array);
 	tmp = array->data[index];
 	array->data[index] = data;

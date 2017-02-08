@@ -6,22 +6,21 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 13:00:06 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/08 09:32:40 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/08 12:12:45 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_array					*ft_heapsort(t_mdata_pq *md)
+t_array					*ft_heapsort(t_pq *pq)
 {
-	t_mdata_array		*ret;
+	t_array				*ret;
 
-	ret = ft_arrayinit(100);
-	while (md->nb_cases > 0)
+	ret = ft_arrayinit(pq->len);
+	while (pq->len > 1)
 	{	
-		ft_arrayadd(ret, ft_arraycreate(md->start[1]->content, md->start[1]\
-		->content_size), 0);
-		ft_pqsupress(md);
+		ft_arrayadd(ret, pq->data[1] , ret->len);
+		ft_pqsupress(pq);
 	}
 	return (ret);
 }

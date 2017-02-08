@@ -4,7 +4,7 @@ void				ft_arrayextend(t_array *array)
 {
 	void			*newdata;
 
-	if (array->len && !(array->len % SIZE))
+	if (!(array->len % SIZE))
 	{
 		array->alloc++;
 		newdata = ft_memalloc_fail(array->alloc * ARRAY_DEFAULT_ALLOC);

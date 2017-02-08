@@ -12,14 +12,22 @@ static int				cmp_pq(void *a, void *b)
 
 int					main(int argc, char **argv)
 {
+	t_pq			*pq;
 	t_array			*array;
-	int				toto;
-	int				tata;
+	int				*values;
+	size_t			i;
+	size_t			tmp;
 
-	array = ft_arrayinit(10);
-	tata = 10;
-	ft_arrayadd(array, &tata, 0);
-	toto = 5;
-	ft_arrayadd(array, &toto, 1);
+	i = 0;
+	pq = ft_pqinit(100000, cmp_pq);
+	values = ft_memalloc_fail(100000 * sizeof(int));	
+	while (i != 100000)
+	{
+		values[i] = rand() % 10000;
+		ft_pqadd(pq, &(values[i]));
+		i++;
+	}
+	ft_pqiter(pq->data, pq->len, print_array);
+	array = ft_heapsort(pq);
 	ft_arrayiter(array->data, array->len, print_array);
 }

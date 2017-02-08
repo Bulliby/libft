@@ -120,13 +120,10 @@ OBJ_PILE	=	ft_pilenew.o\
 				ft_piletail.o\
 
 OBJ_PQ		= 	ft_pqadd.o\
-				ft_pqextend.o\
-				ft_pqgetfather.o\
 				ft_pqinit.o\
 				ft_pqiter.o\
-				ft_pqprint.o\
-				ft_pqsupress.o\
 				ft_pqswap.o\
+				ft_pqsupress.o\
 
 OBJ_PRINTF	=	conv_gen.o\
 				conv_ooxx.o\
@@ -200,7 +197,7 @@ OBJ_STR		=	ft_append_char.o\
 OBJ_PATH	=	.obj/
 OBJS		=	$(OBJ_UTILS) $(OBJ_ARRAY) $(OBJ_DLIST) $(OBJ_DLISTC) $(OBJ_IS)\
 		  		$(OBJ_MATH) $(OBJ_PRINTF) $(OBJ_MEM) $(OBJ_MALLOC) $(OBJ_STR)\
-		  		$(OBJ_PUT) $(OBJ_PILE) $(OBJ_MATH) $(OBJ_LIST)
+		  		$(OBJ_PUT) $(OBJ_PILE) $(OBJ_MATH) $(OBJ_LIST) $(OBJ_PQ)
 
 COMPILE		=	$(addprefix $(OBJ_PATH), $(OBJS))
 
