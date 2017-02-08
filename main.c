@@ -1,8 +1,8 @@
 #include "includes/libft.h"
 
-static void				print_array(t_array *elem)
+static void				print_array(void *elem)
 {
-	printf("[%i]", *(int*)elem->content);
+	printf("[%i]", *(int*)elem);
 }
 
 static int				cmp_pq(void *a, void *b)
@@ -12,24 +12,14 @@ static int				cmp_pq(void *a, void *b)
 
 int					main(int argc, char **argv)
 {
-	int				i;
-	int				tmp;
-	t_mdata_array	*array;
-	t_mdata_pq		*pq;
-	
-	i = 1;
-	pq = ft_pqinit(100, cmp_pq);
-	if (argc == 1)
-	{
-		printf("Entrez des arguments a trier\n");
-		exit(42);
-	}
-	while (i != argc)
-	{
-		tmp = ft_atoi(argv[i]);
-		ft_pqadd(pq, ft_arraycreate(&tmp, sizeof(int)));
-		i++;
-	}
-	array = ft_heapsort(pq);
-	ft_arrayiter(array->start, array->nb_cases, print_array);
+	t_array			*array;
+	int				toto;
+	int				tata;
+
+	array = ft_arrayinit(10);
+	tata = 10;
+	ft_arrayadd(array, &tata, 0);
+	toto = 5;
+	ft_arrayadd(array, &toto, 1);
+	ft_arrayiter(array->data, array->len, print_array);
 }

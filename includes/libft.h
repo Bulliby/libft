@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/06 15:46:08 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/08 09:26:33 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,40 +49,28 @@ typedef struct		s_array
 	size_t			alloc;
 }					t_array;
 
-t_array				*ft_arrayinit(void);
+t_array				*ft_arrayinit(size_t len);
 void				ft_arrayset(t_array *array, size_t index, void *data);
-void				ft_arrayextend(t_array *array, size_t index);
-/*
-void				ft_arrayiter(t_array **start, size_t nb_cases, \
-						void (*f)(t_array *elem));
-void				ft_arraysupress(t_mdata_array *md, size_t index,\
-						void (*supress_func)(t_array **start, size_t nb_cases,\
-							size_t index));
-void				ft_unsorted_supress(t_array **start, size_t nb_cases, \
-						size_t index);
-void				ft_sorted_supress(t_array **start, size_t nb_cases,\
-						size_t index);
-void				ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index);
-void				ft_arraydestroy(t_mdata_array *md);
-void				ft_arraycontract(t_mdata_array *md);
-void				free_elem_and_content(t_array *elem);
+void				ft_arrayextend(t_array *array);
+void				ft_arrayiter(void **data, size_t nb_cases,\
+					void (*f)(void *elem));
+void				ft_arrayadd(t_array *array, void *data, size_t index);
 
-*/
 /*
 ** priority queue
 */
-typedef struct		s_mdata_pq
+typedef struct		s_pq
 {
-	t_array			**start;
-	size_t			nb_alloc;
-	size_t			nb_cases;
+	void			**data;
+	size_t			alloc;
+	size_t			len;
 	int				(*cmp)(void *, void*);
-}					t_mdata_pq;
+}					t_pq;
 
-t_mdata_pq			*ft_pqinit(size_t nb_cases, int (*cmp)(void *, void *));
-void				ft_pqadd(t_mdata_pq *md, t_array *elem);
-void				ft_pqswap(t_array **start, size_t a, size_t b);
-void				ft_pqsupress(t_mdata_pq *md);
+t_mdata_pq			*ft_pqinit(size_t len, int (*cmp)(void *, void *));
+void				ft_pqadd(t_pq *pq, void *elem);
+void				ft_pqswap(void **data, size_t a, size_t b);
+void				ft_pqsupress(t_pq *pq);
 void				ft_pqiter(t_array **start, size_t nb_cases,\
 					void (*f)(t_array *elem));
 

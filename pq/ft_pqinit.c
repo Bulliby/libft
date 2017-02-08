@@ -1,13 +1,13 @@
 #include "libft.h"
 
-t_mdata_pq			*ft_pqinit(size_t nb_cases, int (*cmp)(void *, void *))
+t_pq			*ft_pqinit(size_t len, int (*cmp)(void *, void *))
 {
-	t_mdata_pq		*md;
+	t_pq		*pq;
 
-	md = ft_memalloc_fail(sizeof(t_mdata_pq));
-	md->nb_alloc = nb_cases / SIZE + 1;
-	md->start = ft_memalloc_fail(md->nb_alloc * ARRAY_DEFAULT_ALLOC);
-	md->nb_cases = 0;
-	md->cmp = (*cmp);
-	return (md);
+	pq = ft_memalloc_fail(sizeof(t_pq));
+	pq->alloc = len / SIZE + 1;
+	pq->data = ft_memalloc_fail(pq->alloc * ARRAY_DEFAULT_ALLOC);
+	pq->len = 0;
+	pq->cmp = (*cmp);
+	return (pq);
 }

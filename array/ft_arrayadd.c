@@ -1,24 +1,22 @@
 #include "libft.h"
 
-/*
-void			ft_arrayadd(t_mdata_array *md, t_array *elem, size_t index)
+void			ft_arrayadd(t_array *array, void *data, size_t index)
 {
-	t_array		*tmp;
-	t_array		*tmp2;
+	void		*tmp;
+	void		*tmp2;
 
-	if (index >= md->nb_cases + 1)
+	if (index >= array->len + 1)
 		return ;
-	if (md->nb_cases && !(md->nb_cases % SIZE))
-		ft_arrayextend(md);
-	tmp = md->start[index];
-	md->start[index] = elem;
-	while (index < md->nb_cases)
+	if (array->len && !(array->len % SIZE))
+		ft_arrayextend(array);
+	tmp = array->data[index];
+	array->data[index] = data;
+	while (index < array->len)
 	{
-		tmp2 = md->start[index + 1];
-		md->start[index + 1] = tmp;
+		tmp2 = array->data[index + 1];
+		array->data[index + 1] = tmp;
 		tmp = tmp2;
 		index++;
 	}
-	md->nb_cases++;
+	array->len++;
 }
-*/

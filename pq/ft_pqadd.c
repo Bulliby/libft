@@ -1,20 +1,20 @@
 #include "libft.h"
 
-static void		swap(t_mdata_pq *md, size_t index)
+static void		swap(t_pqata_pq *pq, size_t index)
 {
-	if (index > 1 && md->cmp(md->start[index]->content, \
-		md->start[index / 2]->content) <= 0)
+	if (index > 1 && pq->cmp(pq->data[index]->content, \
+		pq->data[index / 2]->content) <= 0)
 	{
-		ft_pqswap(md->start, index, index / 2);
-		swap(md, index / 2);
+		ft_pqswap(pq->data, index, index / 2);
+		swap(pq, index / 2);
 	}
 }
 
-void			ft_pqadd(t_mdata_pq *md, t_array *elem)
+void			ft_pqadd(t_pq *pq, void *elem)
 {
-	if (md->nb_cases && !(md->nb_cases % SIZE))
-		ft_arrayextend((t_mdata_array*)md);
-	md->start[md->nb_cases] = elem;
-	md->nb_cases++;
-	swap(md, md->nb_cases - 1);
+	if (pq->len && !(pq->len % SIZE))
+		ft_arrayextend((t_pqata_array*)pq);
+	pq->data[pq->len] = elem;
+	pq->len++;
+	swap(pq, pq->len - 1);
 }

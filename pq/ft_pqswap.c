@@ -1,10 +1,10 @@
 #include "libft.h"
 
-void			ft_pqswap(t_array **start, size_t a, size_t b)
+void			ft_pqswap(void **data, size_t a, size_t b)
 {
-	t_array		*tmp;	
+	void		*tmp;	
 	
-	tmp = start[a];
-	start[a] = start[b];
-	start[b] = tmp;
+	tmp = data[a];
+	data[a] = data[b];
+	data[b] = tmp;
 }

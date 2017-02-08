@@ -35,16 +35,9 @@ OBJ_UTILS 	= 	ft_alloc_2d_int.o\
 				get_next_line.o\
 
 OBJ_ARRAY	=	ft_arrayadd.o\
-				ft_arraycontract.o\
-				ft_arraycreate.o\
-				ft_arraydestroy.o\
 				ft_arrayextend.o\
 				ft_arrayinit.o\
 				ft_arrayiter.o\
-				ft_arrayset.o\
-				ft_arraysupress.o\
-				ft_sorted_supress.o\
-				ft_unsorted_supress.o\
 
 OBJ_DLIST	=	ft_dlistpop.o\
 				ft_dlistrotate.o\

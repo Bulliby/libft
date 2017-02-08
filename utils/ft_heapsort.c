@@ -6,14 +6,13 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 13:00:06 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/06 14:34:05 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/08 09:32:40 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-t_mdata_array			*ft_heapsort(t_mdata_pq *md)
+t_array					*ft_heapsort(t_mdata_pq *md)
 {
 	t_mdata_array		*ret;
 
@@ -25,4 +24,4 @@ t_mdata_array			*ft_heapsort(t_mdata_pq *md)
 		ft_pqsupress(md);
 	}
 	return (ret);
-}*/
+}
