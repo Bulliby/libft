@@ -64,20 +64,20 @@ int					main(int argc, char **argv)
 	i = 0;
 	pq = ft_pqinit(1000000, cmp);
 	array = ft_arrayinit(1000000);
-	values = ft_memalloc_fail(1000000 * sizeof(int));	
+	values = ft_malloc_fail(1000000 * sizeof(int));	
 	srand(time(NULL));
-	ft_printtime(true);	
+	//ft_printtime(true);	
 	while (i != 1000000)
 	{
 		values[i] = rand() % 10000000;
 		//ft_arrayadd(array, &(values[i]), array->len);
-		ft_printtime(false);
+		//ft_printtime(false);
 		ft_pqadd(pq, &values[i]);
-		ft_printtime(false);
+		//ft_printtime(false);
 		i++;
 	}
 	//ft_pqiter(pq->data, pq->len, print_array);
 	//array = ft_selectsort(array, select_max);
 	array = ft_heapsort(pq);
-	//ft_arrayiter(array->data, array->len, print_array);
+	ft_arrayiter(array->data, array->len, print_array);
 }
