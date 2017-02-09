@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 10:17:56 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/06 10:35:26 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/09 11:55:52 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,6 @@ static void		putnbrbase(uintmax_t nbr, char *base, size_t base_len)
 
 void			conv_p_malloc(intmax_t adress)
 {
-	int			len;
-
-	len = ft_nbrlen(adress, 16);
 	ft_putstr("0x");
 	putnbrbase(adress, "0123456789abcdef", 16);
 }

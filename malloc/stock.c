@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 15:52:54 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/12 16:13:39 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/09 11:57:34 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,10 @@ static void			*init_stock(t_mem *blocks, t_size area)
 
 void				re_populate_stock(t_mem *blocks, t_size area)
 {
-	void			*ret;
 	t_block			*tmp;
 
 	tmp = (t_block*)blocks->current_block[area];
-	ret = init_stock(blocks, area);
+	init_stock(blocks, area);
 	tmp->next = (t_block*)blocks->current_block[area];
 }
 
