@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/08 10:53:16 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/10 21:46:59 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -261,6 +261,7 @@ char				*ft_strpbrk(const char *s1, const char *s2);
 char				*ft_strrpbrk(const char *s1, const char *s2);
 int					ft_cntc(char *str, char c);
 char				**ft_strsplit_ws(char const *s);
+int					ft_strpos(char *str, char c);
 
 /*
 ** utils

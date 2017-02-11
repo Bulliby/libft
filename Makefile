@@ -195,6 +195,7 @@ OBJ_STR		=	ft_append_char.o\
 				ft_tolower.o\
 				ft_toupper.o\
 				words.o\
+				ft_strpos.o\
 
 OBJ_PATH	=	.obj/
 OBJS		=	$(OBJ_UTILS) $(OBJ_ARRAY) $(OBJ_DLIST) $(OBJ_DLISTC) $(OBJ_IS)\
