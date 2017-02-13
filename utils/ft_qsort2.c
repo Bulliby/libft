@@ -49,6 +49,4 @@ void		ft_quicksort(t_array *array, size_t lower, size_t upper)
 	}
 	printf("\ni_pivot [%zu] PIVOT [%i]\n", i_pivot, pivot);
 	ft_arrayiter(array->data, array->len, print_array);
-	ft_quicksort(array, lower, i_pivot);
-	ft_quicksort(array, i_pivot, upper);
 }

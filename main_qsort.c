@@ -32,7 +32,7 @@ int				main()
 	printf("\nunsorted\n");
 	ft_arrayiter(array->data, array->len, print_array);
 	printf("\n");
-	ft_quicksort(array, 0, array->len - 1);
+	ft_quicksort2(array, 0, array->len - 1);
 	printf("\nsorted\n");
 	ft_arrayiter(array->data, array->len, print_array);
 	return (0);

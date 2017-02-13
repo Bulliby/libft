@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/13 17:03:46 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/13 19:14:05 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -283,6 +283,8 @@ t_array				*ft_selectsort(t_array *base, size_t (*select)\
 					(void **data, const size_t len));
 void				ft_printtime(t_bool start);
 void				ft_quicksort(t_array *array, size_t lower, size_t upper);
+void				ft_arrayswap(t_array *array, size_t a, size_t b);
+void				ft_quicksort2(t_array *array, size_t lower, size_t upper);
 /*
 ** Pour C++
 ** #ifdef __cplusplus
