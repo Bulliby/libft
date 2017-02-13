@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/10 21:46:59 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/13 17:03:46 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -273,7 +273,7 @@ size_t				words(char const *str, char c);
 void				ft_quit(const char *error, int fd, int code);
 int					ft_open_file(char *str, int flag);
 void				ft_qsort(void *ft_tab, size_t nb_elem, size_t size_elem,\
-					int(*diff)(void *const a, void *const b));
+					int(*diff)(void *a, void *b));
 void				ft_isort(void *ft_tab, size_t nb_elem, size_t size_elem,\
 					int(*diff)(void const *a, void const *b));
 int					endofflag(int ac, char **argv);
@@ -282,7 +282,7 @@ t_array				*ft_heapsort(t_pq *md);
 t_array				*ft_selectsort(t_array *base, size_t (*select)\
 					(void **data, const size_t len));
 void				ft_printtime(t_bool start);
-
+void				ft_quicksort(t_array *array, size_t lower, size_t upper);
 /*
 ** Pour C++
 ** #ifdef __cplusplus

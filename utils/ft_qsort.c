@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 08:35:31 by gwells            #+#    #+#             */
-/*   Updated: 2016/04/22 14:01:26 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/13 09:16:37 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t g_nb_elem;
 static size_t g_size_elem;
 int(*g_diff)(void *const a, void *const b);
 
-static void		swap(void *const start_tab, const int a, const int b)
+static void		swap(void * start_tab, const int a, const int b)
 {
 	void	*a_add;
 	void	*b_add;
@@ -36,7 +36,7 @@ static void		swap(void *const start_tab, const int a, const int b)
 	free(temp);
 }
 
-static size_t	partition(void *const start_tab, int premier, int dernier)
+static size_t	partition(void * start_tab, int premier, int dernier)
 {
 	int i;
 	int j;
@@ -70,7 +70,7 @@ static void		quicksortrec(void *tab, int premier, int dernier)
 }
 
 void			ft_qsort(void *tab, size_t nb_elem, size_t size_elem,\
-				int (*diff)(void *const a, void *const b))
+				int (*diff)(void *a, void * b))
 {
 	g_nb_elem = nb_elem;
 	g_size_elem = size_elem;
