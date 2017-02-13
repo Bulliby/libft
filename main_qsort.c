@@ -34,6 +34,6 @@ int				main()
 	printf("\n");
 	ft_quicksort2(array, 0, array->len - 1);
 	printf("\nsorted\n");
-	ft_arrayiter(array->data, array->len, print_array);
+	ft_arrayiter(array->data, array->len - 1, print_array);
 	return (0);
 }
