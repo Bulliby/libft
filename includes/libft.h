@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/15 15:31:55 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/15 15:50:05 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,6 +286,7 @@ void				ft_printtime(t_bool start);
 void				ft_arrayswap(t_array *array, size_t a, size_t b);
 void				ft_quicksort(t_array *array, size_t lower, size_t upper,\
 					int (*cmp)(void const * a, void const *b));
+double				ft_pow(int number, int pow);
 /*
 ** Pour C++
 ** #ifdef __cplusplus

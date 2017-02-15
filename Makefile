@@ -36,6 +36,7 @@ OBJ_UTILS 	= 	ft_alloc_2d_int.o\
 				ft_selectsort.o\
 				ft_printtime.o\
 				ft_qsort.o\
+				ft_pow.o\
 
 OBJ_ARRAY	=	ft_arrayadd.o\
 				ft_arrayextend.o\
