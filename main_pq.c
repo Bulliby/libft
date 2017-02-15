@@ -73,5 +73,5 @@ int					main(int argc, char **argv)
 		i++;
 	}
 	array = ft_heapsort(pq);
-	ft_arrayiter(array->data, array->len, print_array);
+//	ft_arrayiter(array->data, array->len, print_array);
 }

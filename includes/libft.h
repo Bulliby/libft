@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/13 19:14:05 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/15 12:07:29 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,6 +266,7 @@ int					ft_strpos(char *str, char c);
 /*
 ** utils
 */
+
 void				ft_bzero(void *str, size_t n);
 char				*ft_union(char *argv);
 int					get_next_line(int const fd, char **line);
@@ -284,7 +285,8 @@ t_array				*ft_selectsort(t_array *base, size_t (*select)\
 void				ft_printtime(t_bool start);
 void				ft_quicksort(t_array *array, size_t lower, size_t upper);
 void				ft_arrayswap(t_array *array, size_t a, size_t b);
-void				ft_quicksort2(t_array *array, size_t lower, size_t upper);
+void				ft_quicksort2(t_array *array, size_t lower, size_t upper,\
+					int (*cmp)(void const * a, void const *b));
 /*
 ** Pour C++
 ** #ifdef __cplusplus
