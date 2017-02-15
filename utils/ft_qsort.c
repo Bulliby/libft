@@ -1,79 +1,36 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_qsort.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/22 08:35:31 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/13 20:01:26 by gwells           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 #include <stdlib.h>
 
-/*
-**A verifier j'ai changer const
-*/
-
-static size_t g_nb_elem;
-static size_t g_size_elem;
-int(*g_diff)(void *const a, void *const b);
-
-static void		swap(void * start_tab, const int a, const int b)
+static size_t 			cut_off(t_array *array, const size_t lower, size_t upper,\
+						int (*cmp)(void const * a, void const *b))
 {
-	void	*a_add;
-	void	*b_add;
-	void	*temp;
+	size_t				i;
+	size_t				j;
 
-	a_add = (start_tab) + a * g_size_elem;
-	b_add = (start_tab) + b * g_size_elem;
-	temp = ft_memalloc_fail(g_size_elem);
-	temp = ft_memcpy(temp, a_add, g_size_elem);
-	a_add = ft_memcpy(a_add, b_add, g_size_elem);
-	b_add = ft_memcpy(b_add, temp, g_size_elem);
-	free(temp);
-}
-
-static size_t	partition(void * start_tab, int premier, int dernier)
-{
-	int i;
-	int j;
-
-	j = premier;
-	i = j;
-	while (i != dernier)
+	i = lower;
+	j = lower;
+	while (i != upper)
 	{
-		if ((*g_diff)(start_tab + dernier * g_size_elem, start_tab + i\
-			* g_size_elem) < 0)
+		if (cmp(array->data[i], array->data[upper]) > 0)
 		{
-			swap(start_tab, j, i);
+			ft_arrayswap(array, i, j);
 			j++;
-		}
+		}	
 		i++;
-	}
-	swap(start_tab, dernier, j);
+	}	
+	ft_arrayswap(array, upper, j);
 	return (j);
 }
 
-static void		quicksortrec(void *tab, int premier, int dernier)
+void					ft_quicksort(t_array *array, size_t lower, size_t upper, \
+						int (*cmp)(void const * a, void const *b))
 {
-	int pivot;
+	size_t	i_pivot;
 
-	if (premier < dernier)
+	if (lower < upper)
 	{
-		pivot = partition(tab, premier, dernier);
-		quicksortrec(tab, premier, pivot - 1);
-		quicksortrec(tab, pivot + 1, dernier);
+		i_pivot = cut_off(array, lower, upper, cmp);
+		ft_quicksort(array, lower, (!i_pivot) ? i_pivot : i_pivot - 1, cmp);
+		ft_quicksort(array, (i_pivot < upper) ?i_pivot + 1 : i_pivot, upper, cmp);
 	}
-}
-
-void			ft_qsort(void *tab, size_t nb_elem, size_t size_elem,\
-				int (*diff)(void *a, void * b))
-{
-	g_nb_elem = nb_elem;
-	g_size_elem = size_elem;
-	g_diff = diff;
-	quicksortrec(tab, 0, nb_elem - 1);
 }
