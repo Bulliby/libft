@@ -198,6 +198,9 @@ void				ft_pilerotate(t_pile **pile);
 void				ft_pilerrotate(t_pile **pile);
 size_t				ft_pilesize(t_pile *pile);
 t_pile				*ft_piletail(t_pile *pile);
+t_pile				*ft_mergesort(t_pile **pile, \
+					t_bool (*cmp)(void *a, void *b));
+void				ft_pileiter(t_pile *pile, void (*f)(t_pile *elem));
 
 /*
 ** put
