@@ -39,7 +39,9 @@ int				main(void)
 	toto = 8;
 	node = ft_pilenew(&toto, sizeof(int));
 	ft_pilepush(&mystack, node);	
-	printf("\n");
-	ft_pileiter(mystack, print);
+	toto = 9;
+	node = ft_pilenew(&toto, sizeof(int));
+	ft_pilepush(&mystack, node);	
 	mystack_sorted = ft_mergesort(&mystack, cmp);
+	ft_pileiter(mystack_sorted, print);
 }

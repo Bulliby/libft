@@ -125,6 +125,7 @@ OBJ_PILE	=	ft_pilenew.o\
 				ft_piletail.o\
 				ft_mergesort.o\
 				ft_pileiter.o\
+				ft_pilepushback.o\
 
 OBJ_PQ		= 	ft_pqadd.o\
 				ft_pqinit.o\

@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/15 15:50:05 by gwells           ###   ########.fr       */
+/*   Updated: 2017/02/21 12:11:04 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,6 +201,7 @@ t_pile				*ft_piletail(t_pile *pile);
 t_pile				*ft_mergesort(t_pile **pile, \
 					t_bool (*cmp)(void *a, void *b));
 void				ft_pileiter(t_pile *pile, void (*f)(t_pile *elem));
+void				ft_pilepushback(t_pile **pile, t_pile *node);
 
 /*
 ** put
