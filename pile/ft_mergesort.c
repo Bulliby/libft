@@ -9,6 +9,11 @@ static void		push_min_on_c(t_pile **ab, t_pile **c)
 	ft_pilepushback(c, node);
 }
 
+static void				print(t_pile *elem)
+{
+	printf("[%i]", *(int*)elem->content);
+}
+
 static t_pile			*merge(t_pile **a, t_pile **b ,\
 						t_bool (*cmp)(void *a, void *b))
 {
@@ -26,6 +31,9 @@ static t_pile			*merge(t_pile **a, t_pile **b ,\
 		push_min_on_c(a, &c);
 	while (*b)
 		push_min_on_c(b, &c);
+	printf("\n");
+	ft_pileiter(c, print);
+	printf("\n");
 	return (c);
 }
 
