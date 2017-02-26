@@ -13,7 +13,7 @@ static t_bool				cmp(void *a, void *b)
 		return false;
 }
 
-int				main(void)
+int				main(int argc, char **argv)
 {
 	int			toto;
 	t_pile		*mystack;
@@ -21,27 +21,14 @@ int				main(void)
 	t_pile		*node;	
 
 	mystack = NULL;
-	toto = 5;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
-	toto = 4;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
-	toto = 10;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
-	toto = 2;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
-	toto = 6;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
-	toto = 8;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
-	toto = 9;
-	node = ft_pilenew(&toto, sizeof(int));
-	ft_pilepush(&mystack, node);	
+	while (argc - 1 != 0)
+	{
+		toto = ft_atoi(argv[argc - 1]);
+		node = ft_pilenew(&toto, sizeof(int));
+		ft_pilepush(&mystack, node);	
+		argc--;
+	}
+	ft_pileiter(mystack, print);
 	mystack_sorted = ft_mergesort(&mystack, cmp);
 	ft_pileiter(mystack_sorted, print);
 }
