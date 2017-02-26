@@ -31,9 +31,6 @@ static t_pile			*merge(t_pile **a, t_pile **b ,\
 		push_min_on_c(a, &c);
 	while (*b)
 		push_min_on_c(b, &c);
-	printf("\n");
-	ft_pileiter(c, print);
-	printf("\n");
 	return (c);
 }
 

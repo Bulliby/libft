@@ -17,7 +17,7 @@ void		ft_pilerotate(t_pile **pile)
 	t_pile	*save_first;
 	t_pile	*temp;
 
-	if (pile && *pile)
+	if (pile && *pile && (*pile)->prev)
 	{
 		temp = *pile;
 		save_first = *pile;
