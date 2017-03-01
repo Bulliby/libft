@@ -48,6 +48,7 @@ void				ft_arrayextend(t_array *array);
 void				ft_arrayiter(void **data, size_t nb_cases,\
 					void (*f)(void *elem));
 void				ft_arrayadd(t_array *array, void *data, size_t index);
+void				ft_arraydel(t_array *array, size_t index);
 
 /*
 ** priority queue

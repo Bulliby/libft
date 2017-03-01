@@ -1,7 +1,7 @@
 NAME		= 	libft.a
 
 CC			= 	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	#-Wall -Wextra -Werror
 
 INCLUDES	= 	-I./includes
 SRC_ARRAY	= 	./array/
@@ -43,6 +43,7 @@ OBJ_ARRAY	=	ft_arrayadd.o\
 				ft_arrayinit.o\
 				ft_arrayiter.o\
 				ft_arrayswap.o\
+				ft_arraydel.o\
 
 OBJ_DLIST	=	ft_dlistpop.o\
 				ft_dlistrotate.o\

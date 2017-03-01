@@ -17,7 +17,7 @@ void		ft_pilerrotate(t_pile **pile)
 	t_pile	*temp;
 	t_pile	*before_last;
 
-	if (pile && *pile)
+	if (pile && *pile && (*pile)->prev)
 	{
 		temp = *pile;
 		while (temp->prev->prev != NULL)
