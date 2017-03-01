@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 14:18:16 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/08 10:55:46 by gwells           ###   ########.fr       */
+/*   Updated: 2017/03/01 11:10:53 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void			swap(t_pq *pq, size_t index)
 		{
 			ft_pqswap(pq->data, index, lil_child);
 			swap(pq, lil_child);
-		}	
+		}
 	}
 }
 

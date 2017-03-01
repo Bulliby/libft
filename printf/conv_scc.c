@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/16 11:53:57 by gwells            #+#    #+#             */
-/*   Updated: 2015/05/16 11:58:28 by gwells           ###   ########.fr       */
+/*   Updated: 2017/03/01 11:12:38 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void				conv_char(va_list *ap, t_node *node)
 		c = va_arg(*ap, int);
 		if (!node->opt->minus)
 			c_pad_width(1, node);
-		printf_putnchar ((char)c, 1);
+		printf_putnchar((char)c, 1);
 		if (node->opt->minus)
 			c_pad_width(1, node);
 	}

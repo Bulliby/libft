@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/02/21 12:11:04 by gwells           ###   ########.fr       */
+/*   Updated: 2017/03/01 11:05:11 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,6 @@
 # include <stdint.h>
 # include <wchar.h>
 # include "ft_printf.h"
-
-typedef enum			e_bool
-{
-	false = 0,
-	true
-}						t_bool;
-
 # include "malloc.h"
 
 /*
@@ -39,8 +32,8 @@ typedef enum			e_bool
 ** generic array
 */
 
-#define	SIZE 1024
-#define	ARRAY_DEFAULT_ALLOC SIZE * sizeof(void*)
+# define SIZE 1024
+# define ARRAY_DEFAULT_ALLOC SIZE * sizeof(void*)
 
 typedef struct		s_array
 {
@@ -76,7 +69,7 @@ void				ft_pqiter(void **data, size_t len,\
 
 /*
 ** dlist
-*/ 
+*/
 typedef struct		s_dnode
 {
 	void			*content;
@@ -289,7 +282,7 @@ t_array				*ft_selectsort(t_array *base, size_t (*select)\
 void				ft_printtime(t_bool start);
 void				ft_arrayswap(t_array *array, size_t a, size_t b);
 void				ft_quicksort(t_array *array, size_t lower, size_t upper,\
-					int (*cmp)(void const * a, void const *b));
+					int (*cmp)(void const *a, void const *b));
 double				ft_pow(int number, int pow);
 /*
 ** Pour C++

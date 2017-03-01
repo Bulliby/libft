@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/28 10:42:35 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/16 02:30:51 by gwells           ###   ########.fr       */
+/*   Updated: 2017/03/01 11:02:49 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@
 # define SMALL_BLOCK 4096 * getpagesize()
 # define TINY_LIMIT 992
 # define SMALL_LIMIT 7936
+
+typedef enum			e_bool
+{
+	false = 0,
+	true
+}						t_bool;
 
 typedef enum			e_size
 {

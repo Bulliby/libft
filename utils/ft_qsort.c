@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_qsort.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/01 11:15:39 by gwells            #+#    #+#             */
+/*   Updated: 2017/03/01 11:23:30 by gwells           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t 			cut_off(t_array *array, const size_t lower, size_t upper,\
-						int (*cmp)(void const * a, void const *b))
+static size_t			cut_off(t_array *array, const size_t lower, \
+						size_t upper, int (*cmp)(void const *a, void const *b))
 {
 	size_t				i;
 	size_t				j;
@@ -15,15 +27,15 @@ static size_t 			cut_off(t_array *array, const size_t lower, size_t upper,\
 		{
 			ft_arrayswap(array, i, j);
 			j++;
-		}	
+		}
 		i++;
-	}	
+	}
 	ft_arrayswap(array, upper, j);
 	return (j);
 }
 
-void					ft_quicksort(t_array *array, size_t lower, size_t upper, \
-						int (*cmp)(void const * a, void const *b))
+void					ft_quicksort(t_array *array, size_t lower, size_t upper\
+						, int (*cmp)(void const *a, void const *b))
 {
 	size_t	i_pivot;
 
@@ -31,6 +43,7 @@ void					ft_quicksort(t_array *array, size_t lower, size_t upper, \
 	{
 		i_pivot = cut_off(array, lower, upper, cmp);
 		ft_quicksort(array, lower, (!i_pivot) ? i_pivot : i_pivot - 1, cmp);
-		ft_quicksort(array, (i_pivot < upper) ?i_pivot + 1 : i_pivot, upper, cmp);
+		ft_quicksort(array, (i_pivot < upper) ? i_pivot + 1\
+		: i_pivot, upper, cmp);
 	}
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_protected.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/01 11:06:06 by gwells            #+#    #+#             */
+/*   Updated: 2017/03/01 11:06:23 by gwells           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <unistd.h>
 
@@ -12,7 +24,7 @@ static int		int_overflow(int nb, int neg, char str, void (*f)(void))
 	return (nb);
 }
 
-int		ft_atoi_protected(const char *str, void (*f)(void))
+int				ft_atoi_protected(const char *str, void (*f)(void))
 {
 	int			nb;
 	int			neg;

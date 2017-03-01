@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/16 10:56:02 by gwells            #+#    #+#             */
-/*   Updated: 2015/05/16 10:58:01 by gwells           ###   ########.fr       */
+/*   Updated: 2017/03/01 11:12:53 by gwells           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,6 @@ void	putnstr(char *str, int n)
 		i++;
 	}
 }
-
-/*
-void	ft_putnbrbase(uintmax_t nbr, char *base, size_t base_len)
-{
-	if (nbr >= (unsigned int)base_len)
-	{
-		ft_putnbrbase(nbr / base_len, base, base_len);
-		ft_putnbrbase(nbr % base_len, base, base_len);
-	}
-	else
-		printf_putnchar(base[nbr], 1);
-}
-*/
 
 void	putswchar(wchar_t *str)
 {
