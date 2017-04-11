@@ -30,7 +30,8 @@ void					ft_quicksort(t_array *array, size_t lower, size_t upper, \
 	if (lower < upper)
 	{
 		i_pivot = cut_off(array, lower, upper, cmp);
-		ft_quicksort(array, lower, (!i_pivot) ? i_pivot : i_pivot - 1, cmp);
 		ft_quicksort(array, (i_pivot < upper) ?i_pivot + 1 : i_pivot, upper, cmp);
+		printf("i_pivot + 1 [%zu] upper [%zu]", i_pivot + 1, upper);
+		ft_quicksort(array, lower, (!i_pivot) ? i_pivot : i_pivot - 1, cmp);
 	}
 }

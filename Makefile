@@ -1,7 +1,7 @@
 NAME		= 	libft.a
 
 CC			= 	gcc
-CFLAGS		=	#-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror
 
 INCLUDES	= 	-I./includes
 SRC_ARRAY	= 	./array/

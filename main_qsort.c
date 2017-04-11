@@ -1,18 +1,17 @@
 #include "includes/libft.h"
 #include <sys/time.h>
+#include <stdlib.h>
 
 static int				cmp(void const *a, void const *b)
 {
 	return (*(int*)b - *(int*)a);
 }
 
-/*
 static void				print_array(void *elem)
 {
 	printf("[%i]", *(int*)elem);
 }
 
-*/
 int				main()
 {
 	size_t		i;
@@ -20,17 +19,17 @@ int				main()
 	int			*values;
 	
 	i = 0;
-	array = ft_arrayinit(1000000);
-	values = ft_malloc_fail(1000000 * sizeof(int));	
-	srand(time(NULL));
-	while (i != 1000000)
+	array = ft_arrayinit(100);
+	values = ft_malloc_fail(100 * sizeof(int));	
+	while (i != 100)
 	{
 		values[i] = rand() % 1000000;
 		ft_arrayadd(array, &values[i], array->len);
 		i++;
 	}
-	array->len = 1000000;
-	ft_quicksort2(array, 0, array->len - 1, cmp);
+	array->len = 100;
+	ft_quicksort(array, 0, array->len - 1, cmp);
+	ft_arrayiter(array->data, array->len, print_array);
 	return (0);
 }
 

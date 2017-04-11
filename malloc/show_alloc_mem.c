@@ -22,11 +22,11 @@ void			print(t_block *tmp, size_t size)
 	{
 		end = start + sizeof(t_block) + size;
 		ft_putstr_fd("Adress [", 1);
-		conv_p_malloc((intmax_t)start);
+		conv_p_malloc((int)start);
 		ft_putstr_fd("]", 1);
 		ft_putstr_fd(" -- ", 1);
 		ft_putstr_fd("[", 1);
-		conv_p_malloc((intmax_t)end);
+		conv_p_malloc((int)end);
 		ft_putstr_fd("]", 1);
 		ft_putstr_fd(" size ", 1);
 		ft_putstr_fd("[", 1);
@@ -42,17 +42,17 @@ void			show_alloc_mem(void)
 
 	s = singleton();
 	ft_putstr_fd("TINY [", 1);
-	conv_p_malloc((intmax_t)s->block_start[TINY]);
+	conv_p_malloc((int)s->block_start[TINY]);
 	ft_putstr_fd("]", 1);
 	ft_putendl_fd("", 1);
 	iter_block(TINY, &print);
 	ft_putstr_fd("SMALL [", 1);
-	conv_p_malloc((intmax_t)s->block_start[SMALL]);
+	conv_p_malloc((int)s->block_start[SMALL]);
 	ft_putstr_fd("]", 1);
 	ft_putendl_fd("", 1);
 	iter_block(SMALL, &print);
 	ft_putstr_fd("LARGE [", 1);
-	conv_p_malloc((intmax_t)s->block_start[LARGE]);
+	conv_p_malloc((int)s->block_start[LARGE]);
 	ft_putstr_fd("]", 1);
 	ft_putendl_fd("", 1);
 	iter_block(LARGE, &print);

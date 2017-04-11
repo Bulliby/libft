@@ -95,7 +95,7 @@ t_bool					is_allocated(t_block *start, char *ptr);
 /*
 ** print.c
 */
-void					conv_p_malloc(intmax_t adress);
+void					conv_p_malloc(int adress);
 
 /*
 ** calloc.c

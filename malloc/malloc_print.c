@@ -32,9 +32,9 @@ static int		putnchar(char c, int n)
 	return (count);
 }
 
-static void		putnbrbase(uintmax_t nbr, char *base, size_t base_len)
+static void		putnbrbase(int nbr, char *base, size_t base_len)
 {
-	if (nbr >= (unsigned int)base_len)
+	if ((unsigned int)nbr >= (unsigned int)base_len)
 	{
 		putnbrbase(nbr / base_len, base, base_len);
 		putnbrbase(nbr % base_len, base, base_len);
@@ -43,7 +43,7 @@ static void		putnbrbase(uintmax_t nbr, char *base, size_t base_len)
 		putnchar(base[nbr], 1);
 }
 
-void			conv_p_malloc(intmax_t adress)
+void			conv_p_malloc(int adress)
 {
 	ft_putstr("0x");
 	putnbrbase(adress, "0123456789abcdef", 16);

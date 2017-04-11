@@ -2,9 +2,6 @@
 
 int			main(void)
 {
-	double	toto;
-
-	toto = ft_pow(2, 1);
-	printf("toto [%.0lf]\n", toto);
+	printf("sizeof int %i\n", sizeof(int));
 	return (0);
 }
