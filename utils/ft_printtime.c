@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printtime.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/01 11:15:30 by gwells            #+#    #+#             */
+/*   Updated: 2017/03/01 11:18:58 by gwells           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 #include <sys/time.h>
 
-void		ft_printtime(t_bool start)
+void						ft_printtime(t_bool start)
 {
-	static struct timeval t1;
-	struct timeval t2;
-	double			toto;
+	static struct timeval	t1;
+	struct timeval			t2;
+	double					ret;
 
 	if (start == true)
 	{
@@ -20,8 +32,9 @@ void		ft_printtime(t_bool start)
 		ft_bzero(&t2, sizeof(struct timeval));
 		if (gettimeofday(&t2, NULL) == -1)
 			exit(42);
-		toto = (t2.tv_sec - t1.tv_sec) + \
-		((t2.tv_usec - t1.tv_usec)/1000000.0);	
-		printf("Il y a [%lf] secondes que vous avez lance le programe\n", toto);
+		ret = (t2.tv_sec - t1.tv_sec) + \
+		((t2.tv_usec - t1.tv_usec) / 1000000.0);
+		ft_printf("Il y a [%lf] secondes que vous avez\
+		lance le programe\n", ret);
 	}
 }
