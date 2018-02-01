@@ -86,16 +86,16 @@ OBJ_LIST	=	ft_list_size.o\
 				ft_lstnew.o\
 				ft_lstpushback.o\
 
-OBJ_MALLOC	=	calloc.o\
-				free.o\
-				malloc_list.o\
-				malloc.o\
-				malloc_print.o\
-				realloc.o\
-				show_alloc_mem.o\
-				singleton.o\
-				stock.o\
-
+#OBJ_MALLOC	=	calloc.o\
+#				free.o\
+#				malloc_list.o\
+#				malloc.o\
+#				malloc_print.o\
+#				realloc.o\
+#				show_alloc_mem.o\
+#				singleton.o\
+#				stock.o\
+#
 OBJ_MATH	=	ft_abs.o\
 				ft_atoi.o\
 				ft_atoi_protected.o\

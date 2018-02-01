@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/16 18:55:58 by gwells            #+#    #+#             */
-/*   Updated: 2015/02/10 11:55:55 by gwells           ###   ########.fr       */
+/*   Updated: 2018/02/01 20:56:25 by bulliby             \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int		retligne(char **reste, char **line)
 		ft_strdel(&temp);
 		return (1);
 	}
-	else if (*reste != '\0')
+	else if (*reste != NULL)
 		return (lastline(reste, line));
 	return (0);
 }
