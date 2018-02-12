@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 11:07:19 by gwells            #+#    #+#             */
-/*   Updated: 2017/03/01 11:08:30 by gwells           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:39:54 by bulliby             \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static t_pile			*merge(t_pile **a, t_pile **b,\
 	c = NULL;
 	while (*a && *b)
 	{
-		if (cmp((*a)->content, (*b)->content) == true)
+		if (cmp((*a)->content, (*b)->content))
 			push_min_on_c(a, &c);
 		else
 			push_min_on_c(b, &c);

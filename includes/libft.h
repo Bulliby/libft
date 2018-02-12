@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2017/03/01 11:05:11 by gwells           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:26:18 by bulliby             \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include <stdint.h>
 # include <wchar.h>
 # include "ft_printf.h"
-# include "malloc.h"
+// TODO: new Malloc
+//# include "malloc.h"
 
 /*
 **Pour C++
@@ -34,6 +35,8 @@
 
 # define SIZE 1024
 # define ARRAY_DEFAULT_ALLOC SIZE * sizeof(void*)
+
+typedef int         t_bool;
 
 typedef struct		s_array
 {

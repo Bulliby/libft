@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 11:15:30 by gwells            #+#    #+#             */
-/*   Updated: 2017/03/01 11:18:58 by gwells           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:39:25 by bulliby             \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void						ft_printtime(t_bool start)
 	struct timeval			t2;
 	double					ret;
 
-	if (start == true)
+	if (start)
 	{
 		ft_bzero(&t1, sizeof(struct timeval));
 		if (gettimeofday(&t1, NULL) == -1)

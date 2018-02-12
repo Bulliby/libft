@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/15 20:21:54 by gwells            #+#    #+#             */
-/*   Updated: 2016/10/23 15:26:08 by gwells           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:37:34 by bulliby             \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static int			trueflag(char *argv, char *flags)
 
 	flagtochar(argv);
 	if (*argv != '-')
-		return (false);
+		return (0);
 	argv++;
 	while (*argv)
 	{
@@ -86,10 +86,10 @@ static int			trueflag(char *argv, char *flags)
 			i++;
 		}
 		if (!test)
-			return (false);
+			return (0);
 		argv++;
 	}
-	return (true);
+	return (1);
 }
 
 char				*ft_getopt(int argc, char **argv, char *flags)
@@ -105,7 +105,7 @@ char				*ft_getopt(int argc, char **argv, char *flags)
 		return (ft_strdup(""));
 	while (i != end)
 	{
-		if (trueflag(argv[i], flags) == false)
+		if (!trueflag(argv[i], flags))
 			return (NULL);
 		i++;
 	}
