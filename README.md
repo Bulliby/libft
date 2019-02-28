@@ -1,3 +1,3 @@
 # libft
-A student library to use with all school projects
 
+A student library to use with all school projects
