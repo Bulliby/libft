@@ -6,7 +6,7 @@
 /*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2018/02/12 21:26:18 by bulliby             \________/\/\_/      */
+/*   Updated: 2020/11/06 13:44:58 by wells               \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -288,10 +288,22 @@ void				ft_arrayswap(t_array *array, size_t a, size_t b);
 void				ft_quicksort(t_array *array, size_t lower, size_t upper,\
 					int (*cmp)(void const *a, void const *b));
 double				ft_pow(int number, int pow);
+
+/*
+** tree
+*/
+typedef struct		s_tree
+{
+    char            *value;
+	struct s_tree	*left;
+	struct s_tree	*right;
+}					t_tree;
+
 /*
 ** Pour C++
 ** #ifdef __cplusplus
 **}
 ** #endif
 */
+
 #endif
