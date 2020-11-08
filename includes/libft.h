@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gwells <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/22 09:15:02 by gwells            #+#    #+#             */
-/*   Updated: 2018/02/12 21:26:18 by bulliby             \________/\/\_/      */
+/*                                                                            */
+/*   libft.h                                                                  */
+/*                                                        ________            */
+/*   By: bulliby <wellsguillaume+at+gmail.com>           /   ____/_  _  __    */
+/*                                                      /    \  _\ \/ \/ /    */
+/*   Created: 2020/11/08 12:24:17 by bulliby            \     \_\ \     /     */
+/*   Updated: 2020/11/08 14:40:57 by bulliby             \________/\/\_/      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -288,10 +288,45 @@ void				ft_arrayswap(t_array *array, size_t a, size_t b);
 void				ft_quicksort(t_array *array, size_t lower, size_t upper,\
 					int (*cmp)(void const *a, void const *b));
 double				ft_pow(int number, int pow);
+
+/*
+** tree
+*/
+
+typedef struct		s_tree
+{
+    char            *value;
+	struct s_tree	*left;
+	struct s_tree	*right;
+}					t_tree;
+
+/*
+** queue
+*/
+
+typedef struct		s_queue_node
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+	struct s_list	*prev;
+}					t_queue_node;
+
+typedef struct		s_queue
+{
+	t_queue_node	*start;
+	t_queue_node	*end;
+}					t_queue;
+
+t_queue *ft_queue_add(t_queue *queue, void *data);
+t_queue *ft_queue_pop(t_queue *queue);
+t_queue *ft_queue_iter(t_queue *queue, void (*f)(t_list *elem));
+
 /*
 ** Pour C++
 ** #ifdef __cplusplus
 **}
 ** #endif
 */
+
 #endif
